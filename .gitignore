@@ -1,5 +1,11 @@
+# --- 公開リポジトリには「暗号化済みの docs/ とビルド道具」だけを置く ---
+# 平文ソースと復号鍵はローカルのみ（GitHub には上げない）
+src/
+.staticrypt.json
+
+node_modules/
+*.log
+.serve.log
 .DS_Store
 Thumbs.db
 desktop.ini
-*.log
-node_modules/

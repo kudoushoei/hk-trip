@@ -1,0 +1,15 @@
+{
+  "name": "hk-trip-plan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "香港・マカオ トリップしおり（2026/10）— 合い言葉で保護した静的サイト",
+  "scripts": {
+    "build": "staticrypt src/index.html -d docs --remember 365 --short --template-title \"香港・マカオ トリップ ✨\" --template-instructions \"5人で共有しているしおりです。合い言葉を入れてください（LINEで共有済み）\" --template-button \"ひらく\" --template-placeholder \"合い言葉\" --template-error \"合い言葉がちがいます\" --template-remember \"この端末で記憶する\" --template-color-primary \"#6a4cc9\" --template-color-secondary \"#b9a7e6\" && node scripts/postbuild.mjs",
+    "preview": "serve -l 8080 docs",
+    "preview:src": "serve -l 8081 src"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "staticrypt": "^3.5.0"
+  }
+}
