@@ -1,11 +1,12 @@
-# --- 公開リポジトリには「暗号化済みの docs/ とビルド道具」だけを置く ---
-# 平文ソースと復号鍵はローカルのみ（公開 GitHub には上げない）
-# ※ ソース用の PRIVATE リポジトリを作る場合は、この3行を外して src/ 等を含める
+# この公開リポジトリには「配信するファイル（docs/）」だけを置く。
+# 平文ソース・ビルド道具・復号情報はローカル（C:\dev\hk-trip-plan）のみ。
 src/
+scripts/
+node_modules/
+package.json
+package-lock.json
 .staticrypt.json
 REQUIREMENTS.md
-
-node_modules/
 *.log
 .serve.log
 .DS_Store
