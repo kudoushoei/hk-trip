@@ -1,0 +1,1415 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="香港・マカオ 2026/10/9〜10/12・5名の旅のしおり。羽田前泊、空港からマカオ直行、ビクトリア・ピークの夜景、香港ディズニーランド、帰国日の逆算スケジュールまで。">
+<title>香港・マカオ トリップ 2026 ✨ しおり</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Baloo+2:wght@600;700&display=swap">
+<style>
+:root{
+  --paper:#eef2f2;
+  --paper-2:#e3eaea;
+  --ink:#14232b;
+  --ink-soft:#4a5f66;
+  --ink-faint:#7c8e93;
+  --card:#ffffff;
+  --line:#d6dede;
+  --accent:#d85f27;
+  --accent-ink:#8a3915;
+  --macau:#2c8a79;
+  --disney:#b8811f;
+  --depart:#57707a;
+  --warn-bg:#fbe9db;
+  --warn-line:#e3a877;
+  /* magical theme-park layer */
+  --magic-1:#6a4cc9;
+  --magic-2:#d99a2b;
+  --magic-3:#2fb0a0;
+  --magic-ink:#4a2fa0;
+  --magic-glow:rgba(106,76,201,0.13);
+  --sparkle:#f2c14e;
+  --night-1:#3a3170;
+  --night-2:#6a4cc9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1517;
+    --paper-2:#131c1f;
+    --ink:#e8edee;
+    --ink-soft:#a9babe;
+    --ink-faint:#78888c;
+    --card:#161f23;
+    --line:#263136;
+    --accent:#ef8a4c;
+    --accent-ink:#ffcfa8;
+    --macau:#4fb6a4;
+    --disney:#e0ac53;
+    --depart:#8fa6ac;
+    --warn-bg:#2b2013;
+    --warn-line:#7a5326;
+    --magic-1:#a58bff;
+    --magic-2:#f2c766;
+    --magic-3:#4fb6a4;
+    --magic-ink:#cdbcff;
+    --magic-glow:rgba(140,110,255,0.16);
+    --sparkle:#ffe1a0;
+    --night-1:#1b1740;
+    --night-2:#3a2f70;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1517;
+  --paper-2:#131c1f;
+  --ink:#e8edee;
+  --ink-soft:#a9babe;
+  --ink-faint:#78888c;
+  --card:#161f23;
+  --line:#263136;
+  --accent:#ef8a4c;
+  --accent-ink:#ffcfa8;
+  --macau:#4fb6a4;
+  --disney:#e0ac53;
+  --depart:#8fa6ac;
+  --warn-bg:#2b2013;
+  --warn-line:#7a5326;
+  --magic-1:#a58bff;
+  --magic-2:#f2c766;
+  --magic-3:#4fb6a4;
+  --magic-ink:#cdbcff;
+  --magic-glow:rgba(140,110,255,0.16);
+  --sparkle:#ffe1a0;
+  --night-1:#1b1740;
+  --night-2:#3a2f70;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Work Sans', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  line-height:1.65;
+  padding:0 0 5rem;
+  overflow-x:hidden;
+}
+h1,h2,h3{
+  font-family:'Fraunces', 'Noto Serif JP', serif;
+  text-wrap:balance;
+  margin:0;
+}
+.mono{font-family:'IBM Plex Mono', monospace; font-variant-numeric:tabular-nums;}
+
+.wrap{max-width:760px; margin:0 auto; padding:0 1.25rem;}
+
+/* ---------- sparkle field (decorative, page-wide) ---------- */
+.sparkle-field{
+  position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
+}
+.sparkle-field i{
+  position:absolute; display:block; width:10px; height:10px;
+  background:
+    radial-gradient(closest-side, var(--sparkle), transparent 70%);
+  opacity:0; transform:scale(0);
+  animation:floatUp linear infinite;
+}
+.sparkle-field i::before{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(var(--sparkle),var(--sparkle)) center/2px 100% no-repeat,
+            linear-gradient(var(--sparkle),var(--sparkle)) center/100% 2px no-repeat;
+  filter:drop-shadow(0 0 3px var(--sparkle));
+}
+@keyframes floatUp{
+  0%{opacity:0; transform:translateY(20px) scale(0) rotate(0deg);}
+  10%{opacity:0.9;}
+  50%{opacity:0.7;}
+  100%{opacity:0; transform:translateY(-120px) scale(1) rotate(160deg);}
+}
+
+/* keep page content above sparkles */
+header.hero, .wrap, .quicknav{position:relative; z-index:1;}
+
+/* ---------- quick nav ---------- */
+.quicknav{
+  position:sticky; top:0; z-index:30;
+  display:flex; gap:0.4rem; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  padding:0.55rem 1rem;
+  background:color-mix(in srgb, var(--paper) 82%, transparent);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  scrollbar-width:none;
+}
+.quicknav::-webkit-scrollbar{display:none;}
+.quicknav a{
+  flex:none; font-size:0.8rem; font-weight:600; text-decoration:none;
+  color:var(--ink-soft); background:var(--card); border:1px solid var(--line);
+  border-radius:99px; padding:0.3rem 0.8rem; white-space:nowrap;
+}
+.quicknav a:hover{color:var(--magic-ink); border-color:var(--magic-1);}
+
+section[id]{scroll-margin-top:64px;}
+
+/* ---------- header / hero ---------- */
+header.hero{
+  background:
+    radial-gradient(120% 90% at 15% 0%, var(--magic-glow), transparent 60%),
+    radial-gradient(120% 90% at 90% 10%, var(--magic-glow), transparent 55%),
+    linear-gradient(180deg, var(--paper-2), var(--paper) 88%);
+  border-bottom:1px solid var(--line);
+  padding:2.75rem 0 2.25rem;
+  overflow:hidden;
+}
+.hero-deco{
+  position:absolute; inset:0; pointer-events:none; z-index:0;
+  color:var(--magic-1);
+}
+.hero-deco .castle{
+  position:absolute; right:-14px; bottom:-6px; width:min(240px,42vw); height:auto;
+  opacity:0.16; color:var(--magic-1);
+}
+.hero-deco .fw{position:absolute; opacity:0.5;}
+.hero-deco .fw.a{left:6%; top:16%; width:70px; color:var(--magic-2);}
+.hero-deco .fw.b{right:10%; top:10%; width:90px; color:var(--magic-1);}
+.hero-deco .fw.c{left:34%; top:4%; width:52px; color:var(--magic-3);}
+.hero-deco .fw path, .hero-deco .fw circle{animation:burst 4.2s ease-out infinite;}
+.hero-deco .fw.b path, .hero-deco .fw.b circle{animation-delay:1.4s;}
+.hero-deco .fw.c path, .hero-deco .fw.c circle{animation-delay:2.6s;}
+@keyframes burst{
+  0%{transform:scale(0.2); opacity:0;}
+  12%{opacity:1;}
+  55%{opacity:0.65;}
+  75%{transform:scale(1.05); opacity:0;}
+  100%{opacity:0;}
+}
+.hero-deco .twinkle{position:absolute; color:var(--sparkle); animation:twinkle 3s ease-in-out infinite;}
+.hero-deco .twinkle:nth-child(4){left:20%; top:40%; width:16px; animation-delay:.2s;}
+.hero-deco .twinkle:nth-child(5){left:78%; top:52%; width:22px; animation-delay:.9s;}
+.hero-deco .twinkle:nth-child(6){left:58%; top:26%; width:12px; animation-delay:1.6s;}
+.hero-deco .twinkle:nth-child(7){left:44%; top:64%; width:14px; animation-delay:2.3s;}
+@keyframes twinkle{
+  0%,100%{opacity:0.25; transform:scale(0.7) rotate(0deg);}
+  50%{opacity:1; transform:scale(1) rotate(45deg);}
+}
+
+.eyebrow{
+  font-family:'Baloo 2','IBM Plex Mono', monospace;
+  font-size:0.82rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--magic-ink);
+  margin-bottom:0.6rem;
+  display:flex; align-items:center; gap:0.5rem;
+}
+h1{
+  font-size:2.4rem; font-weight:600; color:var(--ink);
+  background:linear-gradient(100deg, var(--ink) 30%, var(--magic-1) 50%, var(--ink) 70%);
+  background-size:220% 100%;
+  -webkit-background-clip:text; background-clip:text;
+  animation:shimmer 6s ease-in-out infinite;
+}
+@keyframes shimmer{
+  0%,100%{background-position:130% 0;}
+  50%{background-position:-30% 0;}
+}
+.subtitle{color:var(--ink-soft); font-size:1.02rem; margin-top:0.5rem;}
+
+.stat-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:0.9rem;
+  margin-top:1.6rem;
+}
+.stat{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:0.8rem 1rem;
+  position:relative; overflow:hidden;
+}
+.stat::after{
+  content:""; position:absolute; right:-10px; top:-10px; width:34px; height:34px;
+  background:radial-gradient(closest-side, var(--magic-glow), transparent);
+}
+.stat .k{font-size:0.72rem; color:var(--ink-faint); letter-spacing:0.05em; text-transform:uppercase;}
+.stat .v{font-family:'Fraunces',serif; font-size:1.15rem; margin-top:0.2rem; font-weight:600;}
+
+/* ---------- ticket card ---------- */
+.ticket{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin-top:2rem;
+  overflow:hidden;
+}
+.ticket-row{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:1.1rem 1.3rem;
+  gap:0.8rem;
+}
+.ticket-row + .ticket-row{border-top:1px dashed var(--line);}
+.ticket-leg .date{font-size:0.75rem; color:var(--ink-faint); font-family:'IBM Plex Mono',monospace;}
+.ticket-leg .place{font-family:'Fraunces',serif; font-size:1.3rem; font-weight:600; margin-top:0.15rem;}
+.ticket-leg .time{font-family:'IBM Plex Mono',monospace; font-size:1.05rem; color:var(--ink-soft); margin-top:0.1rem;}
+.ticket-mid{
+  display:flex; flex-direction:column; align-items:center; gap:0.2rem;
+  color:var(--ink-faint);
+}
+.ticket-mid svg{width:26px; height:26px; stroke:var(--accent);}
+.ticket-mid .flight{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; text-align:center;}
+.ticket-foot{
+  background:var(--paper-2);
+  padding:0.65rem 1.3rem;
+  font-size:0.82rem;
+  color:var(--ink-soft);
+}
+
+/* ---------- warning ---------- */
+.warn{
+  background:var(--warn-bg);
+  border:1px solid var(--warn-line);
+  border-radius:12px;
+  padding:1rem 1.2rem;
+  margin-top:1.3rem;
+  font-size:0.94rem;
+}
+.warn strong{color:var(--accent-ink);}
+
+/* ---------- hotel card ---------- */
+.hotel{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:1.3rem 1.4rem;
+  margin-top:1.3rem;
+}
+.hotel h3{font-size:1.15rem; font-weight:600;}
+.hotel .addr{color:var(--ink-soft); margin-top:0.3rem; font-size:0.93rem;}
+.hotel dl{
+  display:grid; grid-template-columns:auto 1fr; gap:0.35rem 1rem;
+  margin-top:0.9rem; font-size:0.9rem;
+}
+.hotel dt{color:var(--ink-faint); white-space:nowrap;}
+.hotel dd{margin:0; color:var(--ink);}
+
+/* ---------- section ---------- */
+section{margin-top:2.8rem;}
+.section-head{display:flex; align-items:baseline; gap:0.6rem; margin-bottom:1.1rem; flex-wrap:wrap;}
+.section-head h2{
+  font-size:1.5rem;
+  display:flex; align-items:baseline; gap:0.5rem;
+}
+.section-head h2 .ico{font-size:1.15rem; line-height:1;}
+.section-head h2::after{
+  content:""; display:inline-block; width:26px; height:2px; align-self:center;
+  background:linear-gradient(90deg,var(--magic-2),transparent);
+  border-radius:2px;
+}
+.section-head .tag{
+  font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--ink-faint);
+}
+
+/* ---------- key-time banner ---------- */
+.keytime{
+  display:flex; flex-wrap:wrap; gap:0.5rem 1.1rem; align-items:center;
+  margin:0 0 1rem;
+  padding:0.75rem 1rem;
+  border-radius:12px;
+  background:linear-gradient(100deg, color-mix(in srgb,var(--magic-1) 16%, var(--card)), var(--card));
+  border:1px solid color-mix(in srgb,var(--magic-1) 35%, var(--line));
+  font-size:0.9rem;
+}
+.keytime .kt{display:flex; align-items:baseline; gap:0.4rem;}
+.keytime .kt b{font-family:'Fraunces',serif; font-size:1.15rem; color:var(--magic-ink);}
+.keytime .kt span{color:var(--ink-soft); font-size:0.82rem;}
+.keytime .lead{font-weight:700; color:var(--ink); margin-right:0.2rem;}
+
+/* ---------- day card ---------- */
+.day{
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:var(--card);
+  overflow:hidden;
+  position:relative;
+}
+.day + .day{margin-top:1.4rem;}
+.day-head{
+  padding:1.1rem 1.4rem;
+  display:flex; align-items:center; gap:0.9rem;
+  border-bottom:1px solid var(--line);
+}
+.day-head .dot{
+  width:26px; height:26px; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-size:0.95rem;
+  background:color-mix(in srgb, var(--dc,var(--accent)) 20%, var(--card));
+  border:1px solid color-mix(in srgb, var(--dc,var(--accent)) 45%, var(--line));
+}
+.day-head h3{font-size:1.2rem;}
+.day-head .d-date{font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--ink-faint);}
+.day-head .d-theme{margin-left:auto; font-size:0.82rem; color:var(--ink-soft); text-align:right;}
+
+.timeline{padding:1.2rem 1.4rem 1.3rem; display:flex; flex-direction:column; gap:0;}
+.item{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:1rem;
+  position:relative;
+  padding-bottom:1.15rem;
+}
+.item:last-child{padding-bottom:0;}
+.item .time{
+  font-family:'IBM Plex Mono',monospace; font-size:0.85rem; color:var(--ink-soft);
+  padding-top:0.1rem;
+}
+.item .node{
+  position:absolute; left:64px; top:0.35rem; transform:translateX(-16px);
+  width:9px; height:9px; border-radius:50%;
+  background:var(--dc,var(--accent));
+  box-shadow:0 0 0 3px var(--card), 0 0 8px color-mix(in srgb,var(--dc,var(--accent)) 60%, transparent);
+}
+.item::before{
+  content:"";
+  position:absolute; left:64px; top:1rem; bottom:-0.15rem;
+  transform:translateX(-12px);
+  width:1px; background:var(--line);
+}
+.item:last-child::before{display:none;}
+.item .body b{display:block; font-size:0.98rem; font-weight:600;}
+.item .body p{margin:0.2rem 0 0; color:var(--ink-soft); font-size:0.89rem;}
+
+.day.d0{--dc:var(--night-2);}
+.day.d1{--dc:var(--macau);}
+.day.d2{--dc:var(--magic-1);}
+.day.d3{--dc:var(--depart);}
+
+/* Day 2 = the magical one */
+.day.d2{
+  border-color:color-mix(in srgb,var(--magic-1) 40%, var(--line));
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--magic-1) 12%, transparent),
+             0 10px 30px -18px color-mix(in srgb,var(--magic-1) 60%, transparent);
+}
+.day.d2 .day-head{
+  background:linear-gradient(100deg, color-mix(in srgb,var(--magic-1) 14%, var(--card)), var(--card));
+}
+.day.d2 .castle-mark{
+  position:absolute; right:10px; bottom:8px; width:120px; height:auto;
+  color:var(--magic-1); opacity:0.1; pointer-events:none;
+}
+.day.d2 .day-head .dot{animation:twinkle 3.4s ease-in-out infinite;}
+
+/* ---------- recalc table ---------- */
+.recalc{
+  margin-top:1.1rem; border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  background:var(--card);
+}
+.recalc .rc-cap{
+  padding:0.7rem 1rem; font-size:0.82rem; color:var(--ink-soft);
+  background:var(--paper-2); border-bottom:1px solid var(--line);
+}
+.recalc table{width:100%; border-collapse:collapse; font-size:0.88rem;}
+.recalc td{padding:0.6rem 1rem; vertical-align:top; border-top:1px solid var(--line);}
+.recalc tr:first-child td{border-top:none;}
+.recalc td.t{
+  width:74px; white-space:nowrap; font-family:'IBM Plex Mono',monospace;
+  color:var(--magic-ink); font-weight:500;
+}
+.recalc tr.hit td{background:color-mix(in srgb,var(--magic-2) 16%, var(--card));}
+.recalc tr.hit td.t{color:var(--accent-ink);}
+.recalc tr.hit td.d strong{color:var(--accent-ink);}
+
+/* ---------- generic grids / panels ---------- */
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;}
+@media (max-width:600px){
+  .grid2{grid-template-columns:1fr;}
+  .ticket-row{grid-template-columns:1fr auto 1fr; padding:1rem;}
+  .ticket-leg .place{font-size:1.05rem;}
+  h1{font-size:2rem;}
+}
+.panel{
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:1.2rem 1.3rem;
+}
+.panel h3{font-size:1.02rem; margin-bottom:0.6rem;}
+.panel ul{margin:0; padding-left:1.1rem; color:var(--ink-soft); font-size:0.9rem;}
+.panel ul li{margin-bottom:0.35rem;}
+.panel ul li::marker{color:var(--magic-2);}
+
+footer{
+  margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--line);
+  color:var(--ink-faint); font-size:0.8rem;
+}
+footer a{color:var(--ink-soft);}
+
+/* ---------- food guide ---------- */
+.food-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1rem;}
+.food-card{
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:1.1rem 1.2rem;
+}
+.food-tag{
+  display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:0.68rem;
+  letter-spacing:0.04em; color:var(--fc,var(--accent)); border:1px solid var(--fc,var(--accent));
+  border-radius:99px; padding:0.15rem 0.6rem; margin-bottom:0.6rem;
+}
+.food-card h3{font-size:1.02rem; font-weight:600; margin-bottom:0.35rem;}
+.food-card p{margin:0; color:var(--ink-soft); font-size:0.87rem;}
+.tbd-note{color:var(--accent-ink) !important; font-weight:500;}
+
+/* ---------- transit map ---------- */
+.map-figure{margin:0; padding:1.2rem 1.3rem 1rem; background:var(--card); border:1px solid var(--line); border-radius:14px; overflow-x:auto;}
+.map-figure svg{width:100%; min-width:680px; height:auto; display:block; color:var(--ink);}
+.map-figure figcaption{margin-top:0.7rem; font-size:0.82rem; color:var(--ink-faint);}
+
+/* ---------- transit cards ---------- */
+.transit-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1.2rem;}
+.transit-card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.1rem 1.2rem;}
+.transit-card h3{font-size:1rem; font-weight:600; display:flex; align-items:center; gap:0.5rem;}
+.transit-card .swatch{width:10px; height:10px; border-radius:50%; flex:none;}
+.transit-card p{margin:0.5rem 0 0; color:var(--ink-soft); font-size:0.87rem;}
+.transit-card .fare{font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--ink-faint); margin-top:0.4rem;}
+
+/* ---------- suggestion board ---------- */
+.sugg-list{list-style:none; margin:0 0 1.2rem; padding:0; display:flex; flex-direction:column; gap:0.6rem;}
+.sugg-item{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:0.8rem 1rem; display:flex; justify-content:space-between; gap:0.8rem; align-items:baseline; flex-wrap:wrap;}
+.sugg-item .sname{font-weight:600;}
+.sugg-item .snote{color:var(--ink-soft); font-size:0.87rem; flex-basis:100%;}
+.sugg-item .sby{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ink-faint); white-space:nowrap;}
+.sugg-empty{color:var(--ink-faint); font-size:0.9rem;}
+.sugg-form{display:grid; gap:0.7rem; grid-template-columns:1fr 1fr; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.1rem 1.2rem;}
+.sugg-form .full{grid-column:1 / -1;}
+.sugg-form label{font-size:0.78rem; color:var(--ink-faint); display:block; margin-bottom:0.3rem;}
+.sugg-form input{
+  width:100%; font:inherit; font-size:0.9rem; padding:0.5rem 0.6rem;
+  border:1px solid var(--line); border-radius:8px; background:var(--paper); color:var(--ink);
+}
+.sugg-form input:focus{outline:2px solid var(--magic-1); outline-offset:1px; border-color:var(--magic-1);}
+.sugg-form button{
+  grid-column:1 / -1; justify-self:start; font:inherit; font-weight:700; font-size:0.88rem;
+  background:linear-gradient(100deg,var(--magic-1),var(--magic-3));
+  color:#fff; border:none; border-radius:99px; padding:0.6rem 1.5rem; cursor:pointer;
+}
+.sugg-form button:hover{filter:brightness(1.06);}
+.sugg-status{grid-column:1 / -1; font-size:0.82rem; color:var(--ink-faint); min-height:1.2em;}
+.sugg-conn{
+  display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem;
+  font-family:'IBM Plex Mono',monospace; color:var(--ink-faint);
+  margin:-0.4rem 0 1rem;
+}
+.sugg-conn .led{width:8px; height:8px; border-radius:50%; background:var(--ink-faint);}
+.sugg-conn.on .led{background:var(--macau); box-shadow:0 0 6px var(--macau);}
+.sugg-conn.local .led{background:var(--disney); box-shadow:0 0 6px var(--disney);}
+
+/* ---------- checklist ---------- */
+.check-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.5rem;}
+.check-item{
+  display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer;
+  font-size:0.9rem; color:var(--ink);
+}
+.check-item input{
+  appearance:none; -webkit-appearance:none;
+  width:18px; height:18px; flex:none; margin-top:0.15rem;
+  border:1.5px solid var(--ink-faint); border-radius:5px;
+  background:var(--card); cursor:pointer; position:relative;
+}
+.check-item input:checked{background:var(--magic-1); border-color:var(--magic-1);}
+.check-item input:checked::after{
+  content:""; position:absolute; left:5px; top:1px; width:5px; height:9px;
+  border:solid var(--card); border-width:0 2px 2px 0; transform:rotate(45deg);
+}
+.check-item span.txt{transition:color .15s, opacity .15s;}
+.check-item input:checked ~ span.txt{color:var(--ink-faint); text-decoration:line-through; opacity:0.75;}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .sparkle-field{display:none;}
+  .hero-deco .fw path, .hero-deco .fw circle,
+  .hero-deco .twinkle, h1, .day.d2 .day-head .dot{animation:none !important;}
+  h1{background:none; -webkit-background-clip:border-box; background-clip:border-box; color:var(--ink);}
+}
+</style>
+</head>
+<body>
+
+<div class="sparkle-field" id="sparkleField" aria-hidden="true"></div>
+
+<nav class="quicknav" aria-label="ページ内ジャンプ">
+  <a href="#day0">Day 0</a>
+  <a href="#day1">Day 1</a>
+  <a href="#day2">Day 2</a>
+  <a href="#day3">Day 3</a>
+  <a href="#map">マップ</a>
+  <a href="#transit">交通</a>
+  <a href="#money">両替</a>
+  <a href="#food">グルメ</a>
+  <a href="#ideas">おすすめ</a>
+  <a href="#packing">持ち物</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-deco" aria-hidden="true">
+    <!-- fireworks -->
+    <svg class="fw a" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <g><path d="M50 50 V12"/><path d="M50 50 V88"/><path d="M50 50 H12"/><path d="M50 50 H88"/><path d="M50 50 L24 24"/><path d="M50 50 L76 24"/><path d="M50 50 L24 76"/><path d="M50 50 L76 76"/><circle cx="50" cy="10" r="3" fill="currentColor"/><circle cx="90" cy="50" r="3" fill="currentColor"/><circle cx="10" cy="50" r="3" fill="currentColor"/><circle cx="50" cy="90" r="3" fill="currentColor"/></g>
+    </svg>
+    <svg class="fw b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <g><path d="M50 50 V14"/><path d="M50 50 V86"/><path d="M50 50 H14"/><path d="M50 50 H86"/><path d="M50 50 L28 28"/><path d="M50 50 L72 28"/><path d="M50 50 L28 72"/><path d="M50 50 L72 72"/><circle cx="50" cy="12" r="3" fill="currentColor"/><circle cx="88" cy="50" r="3" fill="currentColor"/><circle cx="12" cy="50" r="3" fill="currentColor"/><circle cx="50" cy="88" r="3" fill="currentColor"/></g>
+    </svg>
+    <svg class="fw c" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <g><path d="M50 50 V16"/><path d="M50 50 V84"/><path d="M50 50 H16"/><path d="M50 50 H84"/><circle cx="50" cy="14" r="3" fill="currentColor"/><circle cx="86" cy="50" r="3" fill="currentColor"/></g>
+    </svg>
+    <!-- twinkles -->
+    <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
+    <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
+    <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
+    <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
+    <!-- castle silhouette -->
+    <svg class="castle" viewBox="0 0 200 160" fill="currentColor" aria-hidden="true">
+      <rect x="18" y="86" width="24" height="74"/><path d="M14 86 h32 l-6 -14 h-20 z"/><path d="M30 60 l6 12 h-12 z"/>
+      <rect x="158" y="86" width="24" height="74"/><path d="M154 86 h32 l-6 -14 h-20 z"/><path d="M170 60 l6 12 h-12 z"/>
+      <rect x="58" y="64" width="20" height="96"/><path d="M54 64 h28 l-6 -14 h-16 z"/><path d="M68 40 l6 12 h-12 z"/>
+      <rect x="122" y="64" width="20" height="96"/><path d="M118 64 h28 l-6 -14 h-16 z"/><path d="M132 40 l6 12 h-12 z"/>
+      <rect x="86" y="40" width="28" height="120"/><path d="M80 40 h40 l-8 -18 h-24 z"/><path d="M100 8 l7 14 h-14 z"/>
+      <path d="M92 120 h16 v40 h-16 z" fill="var(--paper)"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="eyebrow"><span>✨ Trip Plan · HKG / MFM</span></div>
+    <h1>香港・マカオ 3日間の旅</h1>
+    <p class="subtitle">羽田前泊（10/9夜）＋香港・マカオ2泊3日（10/10〜12）。マカオはカジノがメイン、夜は香港島でビクトリア・ピークの100万ドルの夜景、中日は香港ディズニーランドを終日。5人で回るしおりです。</p>
+    <div class="stat-row">
+      <div class="stat"><div class="k">日程</div><div class="v">10/9夜–10/12</div></div>
+      <div class="stat"><div class="k">人数</div><div class="v">5名（男2・女3）</div></div>
+      <div class="stat"><div class="k">航空会社</div><div class="v">香港エクスプレス</div></div>
+      <div class="stat"><div class="k">滞在</div><div class="v">九龍・旺角</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section style="margin-top:2rem;">
+    <div class="ticket">
+      <div class="ticket-row">
+        <div class="ticket-leg">
+          <div class="date">2026.10.10 (SAT)</div>
+          <div class="place">羽田 HND</div>
+          <div class="time">06:35 発 · T3</div>
+        </div>
+        <div class="ticket-mid">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16v-2l-8.5-5V3.5a1.5 1.5 0 0 0-3 0V9L2 14v2l8.5-2.5V19L8 20.5V22l4-1 4 1v-1.5L13.5 19v-5.5z"/></svg>
+          <div class="flight">UO625</div>
+        </div>
+        <div class="ticket-leg" style="text-align:right;">
+          <div class="date">2026.10.10 (SAT)</div>
+          <div class="place">香港 HKG</div>
+          <div class="time">10:15 着 · T1</div>
+        </div>
+      </div>
+      <div class="ticket-row">
+        <div class="ticket-leg">
+          <div class="date">2026.10.12 (MON)</div>
+          <div class="place">香港 HKG</div>
+          <div class="time">10:35 発 · T2</div>
+        </div>
+        <div class="ticket-mid">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16v-2l-8.5-5V3.5a1.5 1.5 0 0 0-3 0V9L2 14v2l8.5-2.5V19L8 20.5V22l4-1 4 1v-1.5L13.5 19v-5.5z"/></svg>
+          <div class="flight">UO870</div>
+        </div>
+        <div class="ticket-leg" style="text-align:right;">
+          <div class="date">2026.10.12 (MON)</div>
+          <div class="place">成田 NRT</div>
+          <div class="time">16:05 着 · T2</div>
+        </div>
+      </div>
+      <div class="ticket-foot">搭乗者：KAMBARA MISAKI ／ SATO CHISEI ／ IMAI RINKO ／ KUDO SHOEI（ご本人）／ NOGAWA GAKU</div>
+    </div>
+
+    <div class="warn">
+      <strong>⚠ 帰りの到着空港にご注意：</strong>LINEの下書きでは帰りも「HND」となっていましたが、予約確認メールでは <strong>帰りは成田（NRT）T2着</strong> です。羽田ではないので、ご帰宅の交通手段（京成スカイライナー／N'EX／リムジンバスなど）は成田基準で確認してください。
+    </div>
+
+    <div class="hotel">
+      <h3>Metropark Hotel Kowloon Hong Kong</h3>
+      <div class="addr">75 Waterloo Road, Mong Kok, Kowloon, Hong Kong（九龍・旺角／油麻地エリア）</div>
+      <dl>
+        <dt>最寄り駅</dt><dd>MTR 旺角東（Mong Kok East）駅 徒歩約6分／油麻地（Yau Ma Tei）駅 徒歩約9分</dd>
+        <dt>チェックイン</dt><dd>部屋前で顔写真撮影のみのセルフチェックイン方式。手順・解錠コードは登録メール内のリンクから確認（送られてきたリンク・QRコードを当日に開けばOK）</dd>
+        <dt>到着が22時超</dt><dd>事前連絡が必須と案内あり。到着が遅れそうな場合は忘れずに連絡を</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= DAY 0 ================= -->
+  <section id="day0">
+    <div class="section-head">
+      <h2><span class="ico">🌙</span>Day 0 — 羽田前泊</h2>
+      <span class="tag">10/9 (FRI) 夜 → 10/10 (SAT) 早朝</span>
+    </div>
+
+    <div class="keytime">
+      <span class="lead">この日のキモ</span>
+      <span class="kt"><span>10/10 ホテル出発</span><b>04:00</b></span>
+      <span class="kt"><span>第3ターミナル着</span><b>04:10</b></span>
+      <span class="kt"><span>UO625</span><b>06:35 発</b></span>
+    </div>
+
+    <div class="day d0">
+      <div class="day-head">
+        <span class="dot">🛬</span>
+        <div>
+          <h3>Ikidane Cozy Hotel Haneda Airport</h3>
+          <div class="d-date">東京都大田区羽田5-13-4</div>
+        </div>
+        <span class="d-theme">「天空橋」駅 A2出口<br>徒歩約3分（230m）</span>
+      </div>
+      <div class="timeline">
+        <div class="item"><div class="node"></div><div class="time">10/9 夜</div><div class="body"><b>ホテルにセルフチェックイン</b><p>QRコード＋部屋前での顔写真撮影でチェックイン。正面玄関の解錠番号は<strong>0208＋鍵マークのボタン</strong>。チェックイン完了後に入室方法が表示されるのでその案内に従う。<strong>到着が22:00を過ぎる場合は必ず事前連絡</strong>を、と案内あり。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">前夜</div><div class="body"><b>翌朝の交通手段を確定させる（電車の始発では間に合わない）</b><p class="tbd-note">京急「天空橋」→「羽田空港第3ターミナル」は乗車わずか1分だが、<strong>土曜の始発は5:26発</strong>（次5:31 / 5:46）。UO625は6:35発で、香港エクスプレスのカウンター締切は出発のおよそ60分前（＝5:35頃）。5:26発だと保安検査の列次第で乗り遅れリスクが高いので、<strong>タクシーかNearMeを前提に</strong>。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">選択肢A</div><div class="body"><b>タクシー（おすすめ・確実）</b><p>羽田5丁目→第3ターミナルは約2.5km・5〜10分。早朝は深夜割増（22〜5時は2割増）込みで1台およそ<strong>1,800〜2,500円</strong>。5人＋スーツケースなら中型2台、またはジャンボ1台をホテルで手配してもらう。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">選択肢B</div><div class="body"><b>NearMe（ホテル紹介の事前予約シェアシャトル）</b><p>大田区エリア発は1人1,980円〜、荷物は2個目以降+1,000円/個。<strong>前日18時までに5人分を予約</strong>（羽田空港行きは空きがあれば当日予約も可）。オンライン決済のドアツードア。</p></div></div>
+      </div>
+    </div>
+
+    <div class="recalc">
+      <div class="rc-cap">逆算タイムライン ─ <strong>04:35 までに第3ターミナル到着</strong>（＝UO625 出発の2時間前）を目標に</div>
+      <table>
+        <tr><td class="t">03:45</td><td class="d">起床・身支度・荷物の最終確認。<strong>オンラインチェックインは前夜に</strong>済ませておく（締切は出発75分前）</td></tr>
+        <tr><td class="t">04:00</td><td class="d">ホテル発（タクシー2台／NearMe）。鍵の返却が要る場合は数分前にフロントへ</td></tr>
+        <tr class="hit"><td class="t">04:10</td><td class="d"><strong>羽田空港 第3ターミナル 着</strong>（＝出発の約2時間25分前）</td></tr>
+        <tr><td class="t">04:20</td><td class="d">香港エクスプレス(UO)カウンターでバッグドロップ・搭乗券受取</td></tr>
+        <tr><td class="t">04:45</td><td class="d">保安検査 → 出国審査（早朝は比較的空くが、10月の週末なので余裕を見る）</td></tr>
+        <tr><td class="t">05:20</td><td class="d">制限エリア内へ。朝食・買い物はこのあとで</td></tr>
+        <tr><td class="t">05:55</td><td class="d">搭乗開始の目安（出発40分前）</td></tr>
+        <tr><td class="t">06:35</td><td class="d">UO625 羽田発 → 10:15 香港着</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= DAY 1 ================= -->
+  <section id="day1">
+    <div class="section-head">
+      <h2><span class="ico">🎰</span>Day 1 — 空港から直行マカオ＋夜景</h2>
+      <span class="tag">10/10 (SAT)</span>
+    </div>
+
+    <div class="keytime">
+      <span class="lead">この日のキモ</span>
+      <span class="kt"><span>香港着</span><b>10:15</b></span>
+      <span class="kt"><span>マカオ入国</span><b>12:15</b></span>
+      <span class="kt"><span>ピークで夜景</span><b>19:00頃</b></span>
+    </div>
+
+    <div class="day d1">
+      <div class="day-head">
+        <span class="dot">⛴️</span>
+        <div>
+          <h3>香港入国せずにマカオへ → カジノ → 夜はピーク</h3>
+          <div class="d-date">10/10 (SAT)</div>
+        </div>
+        <span class="d-theme">無料の港珠澳大橋<br>直行バスを使う日</span>
+      </div>
+      <div class="timeline">
+        <div class="item"><div class="node"></div><div class="time">10:15</div><div class="body"><b>香港国際空港 到着（UO625）</b><p><strong>香港には入国せず</strong>、そのままマカオへ向かうルートを使う。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">10:25</div><div class="body"><b>入国審査より手前・E2エリア「38番カウンター」へ</b><p>パスポート・搭乗券の半券・（預け荷物があれば）クレームタグを提示すると、無料の直行バスチケットに交換できる。乗継ぎは荷物ありで最低120分みておく。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">10:40</div><div class="body"><b>APM（自動旅客輸送）でスカイピアへ</b><p>専用エリアなので香港入国審査は通らない。荷物はターンテーブルで受け取り、バスの荷物室へ。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">11:30</div><div class="body"><b>直行バスで港珠澳大橋を渡りマカオへ</b><p>乗車は約40分。<strong>2026年は「Fly You to Macao」で片道無料</strong>（無料枠がなくなり次第終了。念のため通常運賃 約280HKD分の現金・カードも用意）。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">12:15</div><div class="body"><b>港珠澳大橋マカオ口岸 着 → マカオ入国審査</b><p>無料シャトルでコタイ地区へ（約10分）。スーツケースはホテルのベルデスクで一時預かりしてもらうと身軽。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">13:00〜<br>夕方</div><div class="body"><b>コタイ地区で自由行動</b><p>ここから夜景までは細かい予定を入れず、各自で楽しむ。カジノ／ヴェネチアン／ロード・ストウズのエッグタルトなど。<strong>カジノは21歳未満は入場不可・パスポート原本必携</strong>（下の注意書き参照）。夕方までにタイパのフェリーターミナルへ集合。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">夕方</div><div class="body"><b>コタイウォータージェットで香港・上環へ</b><p>所要約55分。<strong>ここで初めて香港に入国</strong>。信德中心（Shun Tak Centre）のコインロッカーにスーツケースを預けて身軽にピークへ。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">19:00〜<br>20:30</div><div class="body"><b>ビクトリア・ピークで100万ドルの夜景</b><p>MTR中環（Central）→ ピークトラム。スカイテラス428など山頂の展望スポットから香港島・九龍・ビクトリアハーバーを一望。10月の日没は18時過ぎなので、着く頃には夜景。ピークトラム＋展望台のチケットは事前購入で行列を短縮できる。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">21:00〜</div><div class="body"><b>中環／蘭桂坊（ランカイフォン）で一杯 → 九龍のホテルへ</b><p>下山後、セントラル周辺のバーで乾杯。荷物を回収してMTRで九龍へ。<strong>到着が22時を過ぎる場合はホテルへ事前連絡が必須</strong>なので、飲んでいる間に一報を。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:1.4rem;">
+    <div class="warn">
+      <strong>🎰 カジノ入場について：</strong>マカオのカジノは<strong>21歳未満は入場不可</strong>（2012年11月から18歳→21歳に引き上げ・以降変更なし）。入口でパスポート提示を求められるので原本を必ず携帯を。短パン・ビーチサンダル・タンクトップなどラフすぎる格好は断られることがあるためスマートカジュアルが無難。5人全員が21歳以上か、事前に確認しておくと安心です。
+    </div>
+    <div class="warn" style="margin-top:0.9rem;">
+      <strong>✈ 空港直行バスは要確認：</strong>「Fly You to Macao」無料キャンペーンは無料チケットの提供枠に限りがあり、なくなり次第終了します。当日カウンターで満枠だった場合に備え、通常運賃（片道280HKD程度）分の現金・カードも用意しておくと安心です。またこのルートは<strong>香港に一度も入国しないことが条件</strong>なので、途中で香港側に出てしまうと使えなくなります。
+    </div>
+  </section>
+
+  <!-- ================= DAY 2 ================= -->
+  <section id="day2">
+    <div class="section-head">
+      <h2><span class="ico">🏰</span>Day 2 — 香港ディズニーランド終日</h2>
+      <span class="tag">10/11 (SUN)</span>
+    </div>
+
+    <div class="keytime">
+      <span class="lead">この日のキモ</span>
+      <span class="kt"><span>ホテル出発</span><b>09:00</b></span>
+      <span class="kt"><span>入園</span><b>10:00〜10:30</b></span>
+      <span class="kt"><span>退園</span><b>18:00</b></span>
+    </div>
+
+    <div class="day d2">
+      <svg class="castle-mark" viewBox="0 0 200 160" fill="currentColor" aria-hidden="true">
+        <rect x="18" y="86" width="24" height="74"/><path d="M14 86 h32 l-6 -14 h-20 z"/><path d="M30 60 l6 12 h-12 z"/>
+        <rect x="158" y="86" width="24" height="74"/><path d="M154 86 h32 l-6 -14 h-20 z"/><path d="M170 60 l6 12 h-12 z"/>
+        <rect x="58" y="64" width="20" height="96"/><path d="M54 64 h28 l-6 -14 h-16 z"/><path d="M68 40 l6 12 h-12 z"/>
+        <rect x="122" y="64" width="20" height="96"/><path d="M118 64 h28 l-6 -14 h-16 z"/><path d="M132 40 l6 12 h-12 z"/>
+        <rect x="86" y="40" width="28" height="120"/><path d="M80 40 h40 l-8 -18 h-24 z"/><path d="M100 8 l7 14 h-14 z"/>
+      </svg>
+      <div class="day-head">
+        <span class="dot">🎆</span>
+        <div>
+          <h3>朝からディズニー、夕方6時に退園</h3>
+          <div class="d-date">10/11 (SUN)</div>
+        </div>
+        <span class="d-theme">前夜が遅い分<br>朝は少しゆっくり</span>
+      </div>
+      <div class="timeline">
+        <div class="item"><div class="node"></div><div class="time">08:30</div><div class="body"><b>起床・ホテル周辺で朝食</b><p>添好運（Tim Ho Wan）旺角店など。パーク内は混むので朝はしっかり食べておく。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">09:00</div><div class="body"><b>ホテル発 →「旺角」または「油麻地」駅へ</b><p>入園チケットは事前オンライン購入で当日並ばず入園できる。各自スマホに保存を。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">09:10</div><div class="body"><b>MTRでディズニーランドへ（約35〜45分）</b><p>荃湾線で「茘景（Lai King）」→ 同じホームの向かいで東涌線に乗り換え →「欣澳（Sunny Bay）」→ ミッキー形の窓のディズニーランド・リゾート線に乗り換え →「迪士尼（Disneyland Resort）」駅。片道 HK$12〜18/人（Octopus）。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">09:55</div><div class="body"><b>ディズニーランド駅 着 → エントランスへ</b><p>ゲートは開園の30分ほど前から入場可（最初はメインストリートUSAまで。奥のエリアはロープで待機）。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">10:00〜<br>10:30</div><div class="body"><b>開園・入園</b><p>10月の開園は概ね10:00〜10:30。<strong>出発2週間前に公式サイトで当日の開園時間を必ず確認</strong>（3か月先までしか公表されないため）。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">10:30〜<br>17:30</div><div class="body"><b>アトラクション・パレード・ショー</b><p>昼食はパーク内で。ファストパス系の有料サービスがあれば活用。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">18:00</div><div class="body"><b>パークを出る</b><p class="tbd-note">花火・ナイトショー（「Momentous」など）は20時前後の実施。18時に出るとこれは見られないので、見たい場合はこの退園時刻を延ばすか、この日の夜の予定を組み替える検討を。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">18:15〜</div><div class="body"><b>MTRで市街へ戻る／夕食・自由行動</b><p>欣澳や市街で夕食。夜に何かしたい場合はここから。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DAY 3 ================= -->
+  <section id="day3">
+    <div class="section-head">
+      <h2><span class="ico">✈️</span>Day 3 — 帰国日</h2>
+      <span class="tag">10/12 (MON)</span>
+    </div>
+
+    <div class="keytime">
+      <span class="lead">この日のキモ</span>
+      <span class="kt"><span>ホテル出発</span><b>07:25</b></span>
+      <span class="kt"><span>香港空港(T2)着</span><b>08:05</b></span>
+      <span class="kt"><span>UO870</span><b>10:35 発</b></span>
+    </div>
+
+    <div class="day d3">
+      <div class="day-head">
+        <span class="dot">🧳</span>
+        <div>
+          <h3>朝イチ出発でNRTへ</h3>
+          <div class="d-date">10/12 (MON)</div>
+        </div>
+        <span class="d-theme">出発2時間前に<br>空港到着の想定</span>
+      </div>
+      <div class="timeline">
+        <div class="item"><div class="node"></div><div class="time">前夜</div><div class="body"><b>荷造り＆オンラインチェックインを済ませる</b><p>UO870は10:35発と早いので当日朝の余裕は少ない。オンラインチェックイン（締切は出発75分前）と、配車アプリ（HKTaxi／Uber）でのタクシー2台の予約を前夜のうちに。フロントに手配を頼んでもOK。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">手段①</div><div class="body"><b>タクシー直行（おすすめ・確実）</b><p>Metropark（旺角・Waterloo Rd）→ 香港国際空港は約26〜28km。月曜の朝は流れやすく<strong>30〜45分</strong>。料金の目安は1台<strong>HK$270〜340</strong>（荷物 HK$6/個・青嶼幹線などの通行料込み）。5人＋荷物で中型2台。ドアツードアで一番読みやすい。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">手段②</div><div class="body"><b>エアポートエクスプレス（渋滞を避けたい場合）</b><p>ホテル→九龍駅（Kowloon）がMTR／タクシーで10〜15分、九龍駅→機場は<strong>約22分・HK$105〜115/人</strong>（Octopus・事前購入で割引、九龍駅から無料の市内シャトルあり）。合計45分〜1時間。</p></div></div>
+        <div class="item"><div class="node"></div><div class="time">手段③</div><div class="body"><b>バス A21（最安）</b><p>旺角から空港まで約50〜70分・HK$約33/人。安いが5人＋スーツケースだと車内が手狭。</p></div></div>
+      </div>
+    </div>
+
+    <div class="recalc">
+      <div class="rc-cap">逆算タイムライン ─ <strong>08:35 までに香港国際空港 到着</strong>（＝UO870 出発の2時間前）を目標に。前提はタクシー直行</div>
+      <table>
+        <tr><td class="t">06:45</td><td class="d">起床・洗面・最終パッキング（前夜にほぼ完了させておく）</td></tr>
+        <tr><td class="t">07:15</td><td class="d">セルフチェックアウト。忘れ物チェック。ロビー集合</td></tr>
+        <tr><td class="t">07:25</td><td class="d">ホテル前からタクシー2台で出発</td></tr>
+        <tr class="hit"><td class="t">08:05</td><td class="d"><strong>香港国際空港 T2 着</strong>（＝出発の約2時間半前）。渋滞したぶんはここで吸収</td></tr>
+        <tr><td class="t">08:15</td><td class="d">T2 Aisle U の香港エクスプレス カウンターでバッグドロップ（カウンターは出発3時間前〜1時間前＝07:35〜09:35 の営業）</td></tr>
+        <tr><td class="t">08:45</td><td class="d">保安検査 → 出国審査</td></tr>
+        <tr><td class="t">09:20</td><td class="d">制限エリアへ。UO870のゲートがバスラウンジの場合は移動に時間がかかるので早めに</td></tr>
+        <tr><td class="t">09:55</td><td class="d">搭乗開始の目安</td></tr>
+        <tr><td class="t">10:35</td><td class="d">UO870 香港発 → 16:05 成田（NRT）T2 着</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= MAP ================= -->
+  <section id="map">
+    <div class="section-head">
+      <h2><span class="ico">🗺️</span>全体の移動マップ</h2>
+      <span class="tag">Route overview</span>
+    </div>
+    <figure class="map-figure">
+      <svg viewBox="0 0 1240 260" role="img" aria-label="羽田を前泊し、香港空港から香港に入国せず無料バスでマカオへ、カジノの後フェリーで上環に入国してビクトリア・ピークへ、九龍のホテルへ戻る。Day2はホテルからMTR往復でディズニーランドへ。Day3はホテルから香港空港経由で成田へ帰る、という一連の移動を示す図">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <text x="60" y="20" font-size="12" text-anchor="middle" fill="currentColor" opacity="0.55">Day 0</text>
+        <text x="540" y="20" font-size="12" text-anchor="middle" fill="currentColor" opacity="0.55">Day 1</text>
+        <text x="860" y="230" font-size="12" text-anchor="middle" fill="currentColor" opacity="0.55">Day 2</text>
+        <text x="1100" y="20" font-size="12" text-anchor="middle" fill="currentColor" opacity="0.55">Day 3</text>
+
+        <line x1="60" y1="80" x2="1180" y2="80" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>
+
+        <text x="140" y="60" font-size="11" text-anchor="middle" fill="currentColor">✈ UO625 6:35発</text>
+        <text x="300" y="60" font-size="11" text-anchor="middle" fill="currentColor">無料直行バス 約1h</text>
+        <text x="460" y="60" font-size="11" text-anchor="middle" fill="currentColor">コタイWJ 55分</text>
+        <text x="620" y="60" font-size="11" text-anchor="middle" fill="currentColor">MTR+ピークトラム</text>
+        <text x="780" y="60" font-size="11" text-anchor="middle" fill="currentColor">MTR 約20分</text>
+        <text x="940" y="60" font-size="11" text-anchor="middle" fill="currentColor">MTR/タクシー</text>
+        <text x="1100" y="60" font-size="11" text-anchor="middle" fill="currentColor">✈ UO870 10:35発</text>
+
+        <line x1="72" y1="80" x2="208" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="232" y1="80" x2="368" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="392" y1="80" x2="528" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="552" y1="80" x2="688" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="712" y1="80" x2="848" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="872" y1="80" x2="1008" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="1032" y1="80" x2="1168" y2="80" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <path d="M 860 90 C 830 140, 830 170, 860 195" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+        <path d="M 860 195 C 890 170, 890 140, 860 90" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+        <text x="795" y="145" font-size="10.5" text-anchor="middle" fill="currentColor">MTR 約45分</text>
+        <text x="925" y="145" font-size="10.5" text-anchor="middle" fill="currentColor">夕方6時に退園</text>
+        <circle cx="860" cy="210" r="7" fill="var(--magic-1)"/>
+        <text x="860" y="232" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="600">ディズニーランド</text>
+
+        <g font-size="11.5" text-anchor="middle">
+          <circle cx="60" cy="80" r="7" fill="var(--depart)"/>
+          <text x="60" y="104">羽田（前泊）</text>
+          <circle cx="220" cy="80" r="7" fill="var(--depart)"/>
+          <text x="220" y="104">香港空港</text>
+          <circle cx="380" cy="80" r="7" fill="var(--macau)"/>
+          <text x="380" y="104">マカオ・コタイ</text>
+          <text x="380" y="118" font-size="10" opacity="0.6">カジノ</text>
+          <circle cx="540" cy="80" r="7" fill="var(--macau)"/>
+          <text x="540" y="104">上環（香港入国）</text>
+          <circle cx="700" cy="80" r="7" fill="var(--macau)"/>
+          <text x="700" y="104">セントラル／ピーク</text>
+          <text x="700" y="118" font-size="10" opacity="0.6">百万ドルの夜景</text>
+          <circle cx="860" cy="80" r="8" fill="var(--accent)"/>
+          <text x="860" y="104" font-weight="700">九龍（ホテル）</text>
+          <circle cx="1020" cy="80" r="7" fill="var(--depart)"/>
+          <text x="1020" y="104">香港空港</text>
+          <circle cx="1180" cy="80" r="7" fill="var(--depart)"/>
+          <text x="1180" y="104">成田 16:05着</text>
+        </g>
+      </svg>
+      <figcaption>Day0で羽田前泊→Day1は香港に入国せず無料バスで直接マカオへ、カジノの後フェリーで上環から香港入国、ピークで夜景を見て九龍のホテルへ。Day2はホテルとディズニーランドをMTRで往復。Day3はホテルから香港空港経由で成田へ帰国。</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= TRANSIT ================= -->
+  <section id="transit">
+    <div class="section-head">
+      <h2><span class="ico">🚇</span>現地の交通ガイド</h2>
+      <span class="tag">Getting around</span>
+    </div>
+    <div class="transit-grid">
+      <div class="transit-card">
+        <h3><span class="swatch" style="background:var(--accent)"></span>MTR（地下鉄）</h3>
+        <p>基本の移動手段。ホテル最寄りの旺角東／油麻地から、上環・セントラル・ディズニーランドまで路線でつながっている。オクトパスカード（Octopus）か、クレジットカードのタッチ決済でそのまま改札を通れる。</p>
+        <p class="fare">1回 HK$5〜15程度／人</p>
+      </div>
+      <div class="transit-card">
+        <h3><span class="swatch" style="background:var(--macau)"></span>スターフェリー</h3>
+        <p>尖沙咀⇄セントラル間を結ぶ、香港名物の渡し船。乗るだけでも観光になる。上環からセントラルへ移動する際、時間があればMTRの代わりに使うのもおすすめ。</p>
+        <p class="fare">HK$5前後／人</p>
+      </div>
+      <div class="transit-card">
+        <h3><span class="swatch" style="background:var(--disney)"></span>ピークトラム</h3>
+        <p>セントラルから山頂へのケーブルカー。混雑時は行列が長くなるため、事前にオンラインでピークトラム＋展望台のチケットを買っておくと待ち時間をかなり短縮できる。</p>
+        <p class="fare">往復 HK$100前後／人（オンライン購入で割引あり）</p>
+      </div>
+      <div class="transit-card">
+        <h3><span class="swatch" style="background:var(--depart)"></span>タクシー</h3>
+        <p>赤（都市部）・緑（新界）・青（ランタオ島）の3色があり、いずれも公式には<strong>最大5人まで乗車可能</strong>（車体に定員表示あり）。ただし車種によっては座席・シートベルトの都合で4人までのこともあるため、乗る前に「5人乗れるか」を運転手に確認するのが確実。5人ぴったりの今回のメンバーにはちょうどいいが、断られた場合に備えて2台に分かれる想定もしておくと安心。</p>
+        <p class="fare">初乗りHK$22（約2km）＋200mごとHK$1.6、トランク荷物1個HK$6、有料トンネル利用時は別途通行料</p>
+      </div>
+    </div>
+    <div class="warn" style="margin-top:1.1rem;">
+      <strong>🚕 タクシー vs MTR：</strong>5人で1台のタクシーに乗れれば、1人あたりの負担はMTR運賃と大差ないか、荷物が多い時・深夜・雨天時はむしろ割安になることも多い。特にホテル⇄ディズニーランドのような距離がある移動や、ピーク下山後の遅い時間はタクシー、上環⇄セントラルのような近距離はMTRやスターフェリー、と使い分けるのがおすすめ。配車アプリ（HKTaxi、Uberなど）を入れておくと呼び出しがスムーズ。
+    </div>
+  </section>
+
+  <!-- ================= MONEY ================= -->
+  <section id="money">
+    <div class="section-head">
+      <h2><span class="ico">💴</span>現地通貨・支払い</h2>
+      <span class="tag">Cash or card</span>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <h3>両替はどのくらい必要？</h3>
+        <ul>
+          <li>香港はキャッシュレス化が進んでおり、クレジットカード（Visa/Mastercard）＋オクトパスカードでほとんどの場面をカバーできる。</li>
+          <li>目安として、5人グループなら合計で HK$3,000〜5,000程度（1人あたりHK$600〜1,000＝日本円1.2〜2万円程度）の現金があれば十分。屋台・ローカル食堂・一部のタクシー・お土産の小規模店で使う想定。</li>
+          <li>全額を日本で両替する必要はなく、少なめに両替→足りなければ現地のATMでキャッシングか追加両替、で十分対応できる。</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>マカオでの支払い</h3>
+        <ul>
+          <li>マカオの通貨はパタカ（MOP）だが、香港ドル（HKD）はマカオでもほぼそのまま使える（レートはほぼ1:1）。<strong>わざわざパタカに両替する必要はない。</strong></li>
+          <li>お釣りがパタカで返ってくることがあるが、パタカは日本に帰ってからの両替が難しいので、マカオを出る前に使い切るのがおすすめ。</li>
+          <li>カジノのチップ購入はキャッシュ（HKDでも可）が基本。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOD ================= -->
+  <section id="food">
+    <div class="section-head">
+      <h2><span class="ico">🍽️</span>グルメガイド</h2>
+      <span class="tag">Where to eat</span>
+    </div>
+    <div class="food-grid">
+      <div class="food-card">
+        <span class="food-tag" style="--fc:var(--depart)">Day1 21時・セントラル</span>
+        <h3>蘭桂坊（Lan Kwai Fong）</h3>
+        <p>ピーク下山後にちょうどいい、香港随一のバー街。屋外に人があふれる活気ある雰囲気で、軽く一杯からしっかり飲むまで幅広く対応。</p>
+      </div>
+      <div class="food-card">
+        <span class="food-tag" style="--fc:var(--macau)">Day1 深夜・ホテル帰着後</span>
+        <h3>興記煲仔飯</h3>
+        <p>ホテルから徒歩圏、廟街（テンプルストリート）の名物クレイポットライス店。夜市の屋台は深夜まで営業しているので、飲んだ後の締めの一品にも。</p>
+      </div>
+      <div class="food-card">
+        <span class="food-tag" style="--fc:var(--macau)">Day1 マカオ・コタイ</span>
+        <h3>ロード・ストウズ・ベーカリー（安德魯餅店）</h3>
+        <p>マカオ発祥のポルトガル風エッグタルトの元祖。<strong>ザ・ベネチアン・マカオ内に支店あり</strong>なので、カジノ観光のついでに寄れる。</p>
+      </div>
+      <div class="food-card">
+        <span class="food-tag" style="--fc:var(--macau)">Day1 マカオ・タイパ旧市街</span>
+        <h3>大利来記（Tai Lei Loi Kei）</h3>
+        <p>タイパ島の名物ポークチョップバン。コタイ地区から少し足を延ばせる距離。時間に余裕があれば。</p>
+      </div>
+      <div class="food-card">
+        <span class="food-tag" style="--fc:var(--disney)">Day2 朝・ホテル周辺</span>
+        <h3>添好運（Tim Ho Wan）</h3>
+        <p>ミシュラン一つ星の飲茶が手頃な価格で楽しめる人気店。ディズニーへ出発前の朝食や、帰着後の夕食に。</p>
+      </div>
+      <div class="food-card">
+        <span class="food-tag" style="--fc:var(--depart)">通しで・軽食</span>
+        <h3>沾仔記／麥奀雲吞麵</h3>
+        <p>香港名物のエビワンタン麺の名店。細麺とプリプリのエビワンタンが特徴で、移動の合間の軽食にちょうどいい。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SUGGESTIONS ================= -->
+  <section id="ideas">
+    <div class="section-head">
+      <h2><span class="ico">🪄</span>みんなのおすすめ追加</h2>
+      <span class="tag">Add your own · 全員で編集可</span>
+    </div>
+    <p style="color:var(--ink-soft); font-size:0.9rem; margin:-0.4rem 0 0.6rem;">行きたいお店・食べたいものがあれば下のフォームから追加してください。URLを開いた5人みんなの画面に反映されます（共有データベースに保存）。未設定・オフライン時はこの端末内にだけ保存されます。</p>
+    <div class="sugg-conn" id="suggestion-conn"><span class="led"></span><span id="suggestion-conn-text">接続を確認中…</span></div>
+    <ul class="sugg-list" id="suggestion-list"></ul>
+    <form class="sugg-form" id="suggestion-form">
+      <div class="full">
+        <label for="sugg-name">お店・場所の名前</label>
+        <input type="text" id="sugg-name" maxlength="60" required placeholder="例：糖朝（プリンのお店）">
+      </div>
+      <div class="full">
+        <label for="sugg-note">メモ（エリア・理由など・任意）</label>
+        <input type="text" id="sugg-note" maxlength="120" placeholder="例：尖沙咀にある、マンゴープリンが名物">
+      </div>
+      <div>
+        <label for="sugg-by">追加する人（任意）</label>
+        <input type="text" id="sugg-by" maxlength="20" placeholder="例：しょうえい">
+      </div>
+      <button type="submit">✨ リストに追加</button>
+      <div class="sugg-status" id="suggestion-status"></div>
+    </form>
+  </section>
+
+  <!-- ================= PACKING ================= -->
+  <section id="packing">
+    <div class="section-head">
+      <h2><span class="ico">🎒</span>持ち物チェックリスト</h2>
+      <span class="tag">Packing · タップでチェック（この端末に保存）</span>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <h3>全員共通・必須書類</h3>
+        <ul class="check-list" data-group="docs"></ul>
+      </div>
+      <div class="panel">
+        <h3>服装・気候対策（10月は最高28℃・最低23℃目安）</h3>
+        <ul class="check-list" data-group="wear"></ul>
+      </div>
+      <div class="panel">
+        <h3>マカオ・カジノ用</h3>
+        <ul class="check-list" data-group="casino"></ul>
+      </div>
+      <div class="panel">
+        <h3>ディズニー当日用</h3>
+        <ul class="check-list" data-group="disney"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEFORE YOU GO ================= -->
+  <section>
+    <div class="section-head">
+      <h2><span class="ico">📋</span>渡航前チェック</h2>
+      <span class="tag">Before you go</span>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <h3>入国・ビザ</h3>
+        <ul>
+          <li>日本国籍は観光目的なら香港・マカオともに90日以内はビザ免除（長年変わっていないルールですが、出発前に最新情報を要確認）。</li>
+          <li>香港⇄マカオの移動でもそれぞれ出入境審査があり、パスポートに出入国スタンプが押される。</li>
+          <li>パスポートの残存有効期間を確認（目安6ヶ月以上）。</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>その他の準備</h3>
+        <ul>
+          <li>香港ドル（HKD）とマカオパタカ（MOP）：主要な場所はクレジットカード／Octopus・スマホ決済が使えるが少額現金もあると安心。</li>
+          <li>マカオ行きフェリー（コタイウォータージェット）のチケットは週末混雑が予想されるため事前予約がおすすめ。</li>
+          <li>ディズニーのチケットは事前にオンライン購入しておくと当日並ばずに入園できる。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    このプランは2026年8月30日時点の情報（予約メール記載内容＋一般的な運航・営業・グルメ情報）をもとに作成した草案です。ディズニーランドの開園時間、フェリーの時刻表・発着ターミナル、シンフォニー・オブ・ライツの実施状況、飲食店の営業状況、タクシー運賃、京急・東京モノレールの始発時刻は変更されることがあるため、出発が近づいたら公式サイトで再確認してください。<strong>持ち物チェックはこの端末のブラウザ内にのみ保存</strong>され、他の人とは共有されません。<strong>「みんなのおすすめ追加」は共有データベース（Firebase Realtime Database）に保存</strong>され、URLを開いた全員に反映されます（未設定・接続できない場合はこの端末内のみ）。<br>
+    参考：<a href="https://urtrip.jp/macau-hongkong-ferry/">香港⇄マカオ フェリー・ターミナル情報</a>／<a href="https://castel.jp/p/9169">香港ディズニーランド 営業時間ガイド</a>／<a href="https://www.tripadvisor.com/Hotel_Review-g294217-d305947-Reviews-Metropark_Hotel_Kowloon-Hong_Kong.html">Metropark Hotel Kowloon 立地情報</a>／<a href="https://www.macaushimbun.com/archives/18643">マカオ カジノ年齢制限（21歳以上）</a>／<a href="https://www.hkexpress.com/ja/Explore/Travel-Guide/Macao/must-eat-food-in-macao">マカオ必食グルメガイド</a>／<a href="https://jp.trip.com/guide/info/%E9%A6%99%E6%B8%AF%E3%81%AE10%E6%9C%88%E3%81%AE%E6%B0%97%E6%B8%A9.html">香港10月の気候ガイド</a>／<a href="https://airports-travel.jp/travel/transportation/shuttlebus-hongkong-to-macau/">香港国際空港→マカオ 無料直行バス案内</a>／<a href="https://blog.fubukiefsf.info/entry/hongkong-airport-direct-bus-to-macau">空港直行バス 体験レポート（手続き詳細）</a>／<a href="https://www.macaushimbun.com/archives/58656">Fly You to Macaoキャンペーン情報</a>／<a href="https://urtrip.jp/victoria_peak_tram/">ピークトラム チケット・行き方ガイド</a>／<a href="https://www.hkexpress.com/en/Plan/Guideline/Airport-Check-in/Counter-Check-in-Timetable">香港エクスプレス カウンターチェックイン時間</a>／<a href="https://transit.yahoo.co.jp/timetable/22910/3231">天空橋駅（京急空港線）時刻表</a>／<a href="https://urtrip.jp/hongkong_disney_access/">香港ディズニーランドへの行き方</a>／<a href="https://urtrip.jp/hongkong_airport_access/">香港国際空港アクセス／エアポートエクスプレス</a>／<a href="https://locotabi.jp/hongkong/guide/tp-gen-taxi">香港タクシー運賃ガイド</a>／<a href="https://wise.com/jp/blog/cash-or-card-in-hongkong">香港の現金・カード事情</a>／<a href="https://travel.rakuten.com/usa/en-us/hotel_info_item/10123456890016">Ikidane Cozy Hotel Haneda Airport 施設情報</a>／<a href="https://app.nearme.jp/blog/articles/2024-03-22-haneda-airport-nearme-transfer-service-guide">NearMe 羽田空港送迎サービス案内</a>
+  </footer>
+
+</div>
+
+<!-- config: fill in databaseURL (see README.md) -->
+<script src="firebase-config.js"></script>
+
+<script>
+/* ---------- sparkle field ---------- */
+(function(){
+  var host = document.getElementById("sparkleField");
+  if(!host) return;
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var N = 18;
+  for(var i=0;i<N;i++){
+    var s = document.createElement("i");
+    s.style.left = (Math.random()*100).toFixed(2) + "%";
+    s.style.top = (60 + Math.random()*45).toFixed(2) + "%";
+    var size = (6 + Math.random()*10).toFixed(1);
+    s.style.width = size + "px";
+    s.style.height = size + "px";
+    s.style.animationDuration = (6 + Math.random()*7).toFixed(1) + "s";
+    s.style.animationDelay = (-Math.random()*12).toFixed(1) + "s";
+    host.appendChild(s);
+  }
+})();
+</script>
+
+<script>
+/* ---------- packing checklist (localStorage only — unchanged behaviour) ---------- */
+(function(){
+  var groups = {
+    docs: [
+      "パスポート（残存6ヶ月以上を確認）",
+      "パスポートのコピー（原本とは別の場所に保管）",
+      "海外旅行保険の証券・連絡先控え",
+      "クレジットカード（VISA/Mastercard推奨）",
+      "香港ドル・マカオパタカの少額現金",
+      "モバイルWi-FiまたはeSIMの準備",
+      "ホテルのセルフチェックイン用リンク・コードの確認",
+      "ピークトラム＋展望台の事前チケット（オンライン購入推奨）",
+      "ディズニーの入園チケット（事前オンライン購入）"
+    ],
+    wear: [
+      "半袖・薄手の長袖（日中28℃前後）",
+      "羽織りもの（冷房・夜間の23℃前後対策）",
+      "歩きやすい靴",
+      "折りたたみ傘",
+      "日焼け止め・帽子・サングラス",
+      "変換プラグ（BFタイプ／3ピン角型）",
+      "モバイルバッテリー"
+    ],
+    casino: [
+      "パスポート原本（コピー不可・必携）",
+      "スマートカジュアルな服装一式（短パン・ビーチサンダル不可）",
+      "同行者全員が21歳以上か事前確認済み",
+      "カジノ用の予算を現金で分けておく"
+    ],
+    disney: [
+      "入園チケット（事前オンライン購入）を各自スマホに保存",
+      "歩きやすい靴・靴擦れ対策",
+      "モバイルバッテリー（写真・アプリで消費大）",
+      "軽量レインコート（雨天時アトラクション待ちの備え）"
+    ]
+  };
+  var STORAGE_KEY = "hk-trip-packing-v1";
+  var state = {};
+  try{ state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }catch(e){ state = {}; }
+
+  function save(){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+  }
+
+  Object.keys(groups).forEach(function(group){
+    var ul = document.querySelector('.check-list[data-group="' + group + '"]');
+    if(!ul) return;
+    groups[group].forEach(function(label, i){
+      var id = group + "-" + i;
+      var li = document.createElement("li");
+      var itemLabel = document.createElement("label");
+      itemLabel.className = "check-item";
+      var input = document.createElement("input");
+      input.type = "checkbox";
+      input.checked = !!state[id];
+      input.addEventListener("change", function(){
+        state[id] = input.checked;
+        save();
+      });
+      var span = document.createElement("span");
+      span.className = "txt";
+      span.textContent = label;
+      itemLabel.appendChild(input);
+      itemLabel.appendChild(span);
+      li.appendChild(itemLabel);
+      ul.appendChild(li);
+    });
+  });
+})();
+</script>
+
+<script>
+/* ---------- shared "suggestions" board ----------
+   Backend: Firebase Realtime Database REST API (no SDK, no API key).
+   - initial load : GET  {databaseURL}/{path}.json
+   - live updates : EventSource on the same URL (Firebase SSE streaming)
+                    -> if EventSource is unavailable/fails, poll every 7s
+   - add entry    : POST {databaseURL}/{path}.json   (Firebase makes a push id)
+   Fallback: if no databaseURL is configured, or the network fails,
+   everything runs against localStorage on this device only.
+   (Multiple tabs of the same browser stay in sync via the 'storage' event.)
+*/
+(function(){
+  var cfg = window.HK_TRIP_CONFIG || {};
+  var DB = String(cfg.databaseURL || "").replace(/\/+$/, "");
+  var PATH = String(cfg.path || "suggestions").replace(/^\/+|\/+$/g, "");
+  var ONLINE_CONFIGURED = /^https:\/\/[^ ]+/.test(DB);
+  var ENDPOINT = ONLINE_CONFIGURED ? (DB + "/" + PATH + ".json") : null;
+  var LS_KEY = "hk-trip-suggestions-v2";
+
+  var listEl   = document.getElementById("suggestion-list");
+  var formEl   = document.getElementById("suggestion-form");
+  var statusEl = document.getElementById("suggestion-status");
+  var connEl   = document.getElementById("suggestion-conn");
+  var connText = document.getElementById("suggestion-conn-text");
+
+  var items = [];              // [{id,name,note,by,at}]
+  var mode = "local";          // "local" | "online"
+  var es = null, pollTimer = null;
+
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function normalize(v, k){
+    v = v || {};
+    return { id: String(k), name: String(v.name||""), note: String(v.note||""),
+             by: String(v.by||""), at: String(v.at||"") };
+  }
+  function toArray(data){
+    if(!data) return [];
+    var arr;
+    if(Array.isArray(data)){
+      arr = data.map(function(v,i){ return v ? normalize(v, i) : null; }).filter(Boolean);
+    } else {
+      arr = Object.keys(data).map(function(k){ return normalize(data[k], k); });
+    }
+    arr.sort(function(a,b){ return (a.at||"") < (b.at||"") ? -1 : (a.at||"") > (b.at||"") ? 1 : 0; });
+    return arr;
+  }
+  function loadLocal(){ try{ return JSON.parse(localStorage.getItem(LS_KEY) || "[]"); }catch(e){ return []; } }
+  function saveLocal(arr){ try{ localStorage.setItem(LS_KEY, JSON.stringify(arr)); }catch(e){} }
+
+  function setConn(kind, text){
+    if(connEl){ connEl.className = "sugg-conn" + (kind ? " " + kind : ""); }
+    if(connText){ connText.textContent = text; }
+  }
+  function setStatus(text){ if(statusEl) statusEl.textContent = text; }
+
+  function render(){
+    if(!listEl) return;
+    listEl.innerHTML = "";
+    if(!items.length){
+      var empty = document.createElement("li");
+      empty.className = "sugg-empty";
+      empty.textContent = "まだ追加されていません。下のフォームから一番乗りでどうぞ。";
+      listEl.appendChild(empty);
+      return;
+    }
+    items.forEach(function(s){
+      var li = document.createElement("li");
+      li.className = "sugg-item";
+      var html = '<span class="sname">' + escapeHtml(s.name) + '</span>';
+      if(s.by)   html += '<span class="sby">' + escapeHtml(s.by) + '</span>';
+      if(s.note) html += '<span class="snote">' + escapeHtml(s.note) + '</span>';
+      li.innerHTML = html;
+      listEl.appendChild(li);
+    });
+  }
+
+  /* ---- online mode ---- */
+  function goOnline(){
+    setConn("", "共有リストに接続中…");
+    fetch(ENDPOINT, { cache: "no-store" })
+      .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function(data){
+        items = toArray(data);
+        mode = "online";
+        render();
+        setConn("on", "共有中 — 5人みんなの画面に反映されます");
+        subscribe();
+      })
+      .catch(function(err){
+        console.warn("[suggestions] online load failed:", err);
+        toLocal("共有サーバーに接続できませんでした。この端末内だけで保存します。");
+      });
+  }
+
+  function subscribe(){
+    if(typeof EventSource === "undefined"){ startPolling(); return; }
+    try{ es = new EventSource(ENDPOINT); }
+    catch(e){ startPolling(); return; }
+
+    es.addEventListener("put", onStream);
+    es.addEventListener("patch", onStream);
+    es.addEventListener("open", function(){
+      setConn("on", "共有中 — リアルタイム更新オン");
+    });
+    es.onerror = function(){
+      // EventSource retries automatically; only give up if it's fully closed
+      if(es && es.readyState === 2){
+        try{ es.close(); }catch(e){}
+        es = null;
+        startPolling();
+      }
+    };
+  }
+
+  function onStream(ev){
+    var payload;
+    try{ payload = JSON.parse(ev.data); }catch(e){ return; }
+    if(!payload || typeof payload.path === "undefined") return;
+    var p = payload.path, d = payload.data;
+    if(p === "/"){
+      items = toArray(d);
+    } else {
+      var key = p.replace(/^\//, "").split("/")[0];
+      if(!key) return;
+      if(d === null){
+        items = items.filter(function(it){ return it.id !== key; });
+      } else {
+        var hit = false;
+        items = items.map(function(it){
+          if(it.id === key){ hit = true; return normalize(d, key); }
+          return it;
+        });
+        if(!hit) items.push(normalize(d, key));
+        items.sort(function(a,b){ return (a.at||"") < (b.at||"") ? -1 : (a.at||"") > (b.at||"") ? 1 : 0; });
+      }
+    }
+    render();
+  }
+
+  function startPolling(){
+    if(pollTimer) return;
+    setConn("on", "共有中 — 自動更新（約7秒ごと）");
+    pollTimer = setInterval(function(){
+      fetch(ENDPOINT, { cache: "no-store" })
+        .then(function(r){ return r.ok ? r.json() : undefined; })
+        .then(function(data){ if(data !== undefined){ items = toArray(data); render(); } })
+        .catch(function(){});
+    }, 7000);
+  }
+
+  function toLocal(msg){
+    mode = "local";
+    if(es){ try{ es.close(); }catch(e){} es = null; }
+    if(pollTimer){ clearInterval(pollTimer); pollTimer = null; }
+    items = toArray(loadLocal());
+    render();
+    setConn("local", "この端末内のみ（共有なし）");
+    if(msg) setStatus(msg);
+  }
+
+  /* ---- add ---- */
+  function addEntry(entry){
+    if(mode === "online"){
+      setStatus("追加中…");
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(entry)
+      })
+        .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .then(function(res){
+          var id = (res && res.name) ? res.name : ("tmp-" + Date.now());
+          if(!items.some(function(it){ return it.id === id; })){
+            items.push(normalize(entry, id));
+            items.sort(function(a,b){ return (a.at||"") < (b.at||"") ? -1 : 1; });
+            render();
+          }
+          if(formEl) formEl.reset();
+          setStatus("追加しました。みんなの画面にも反映されます。");
+        })
+        .catch(function(err){
+          console.warn("[suggestions] add failed:", err);
+          var local = loadLocal();
+          local.push(normalize(entry, "local-" + Date.now()));
+          saveLocal(local);
+          setStatus("共有サーバーに送れませんでした。この端末内には保存しました（電波の良い所で再度お試しを）。");
+        });
+    } else {
+      var arr = loadLocal();
+      arr.push(normalize(entry, "local-" + Date.now()));
+      saveLocal(arr);
+      items = toArray(arr);
+      render();
+      if(formEl) formEl.reset();
+      setStatus(ONLINE_CONFIGURED
+        ? "この端末内に保存しました（共有サーバーに接続できていません）。"
+        : "この端末内に保存しました（共有データベース未設定 → README.md を参照）。");
+    }
+  }
+
+  if(formEl){
+    formEl.addEventListener("submit", function(ev){
+      ev.preventDefault();
+      var name = (document.getElementById("sugg-name").value || "").trim();
+      if(!name) return;
+      addEntry({
+        name: name,
+        note: (document.getElementById("sugg-note").value || "").trim(),
+        by:   (document.getElementById("sugg-by").value || "").trim(),
+        at:   new Date().toISOString()
+      });
+    });
+  }
+
+  // keep multiple tabs of the SAME browser in sync while in local mode
+  window.addEventListener("storage", function(e){
+    if(e.key === LS_KEY && mode === "local"){ items = toArray(loadLocal()); render(); }
+  });
+
+  // init
+  if(ONLINE_CONFIGURED){
+    items = toArray(loadLocal());   // show something instantly, then replace with server data
+    render();
+    goOnline();
+  } else {
+    toLocal("");
+    setStatus("共有データベース未設定です。README.md の手順で firebase-config.js を設定すると、5人で共有できます。");
+  }
+})();
+</script>
+
+</body>
+</html>
