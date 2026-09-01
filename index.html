@@ -11,80 +11,86 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Baloo+2:wght@600;700&display=swap">
 <style>
+/* ========== 香港テーマ・パレット（茶樓の紙 × 提灯の朱 × 翡翠 × ネオン桃 × 金） ========== */
 :root{
-  --paper:#eef2f2;
-  --paper-2:#e3eaea;
-  --ink:#14232b;
-  --ink-soft:#4a5f66;
-  --ink-faint:#7c8e93;
-  --card:#ffffff;
-  --line:#d6dede;
-  --accent:#d85f27;
-  --accent-ink:#8a3915;
-  --macau:#2c8a79;
-  --disney:#b8811f;
-  --depart:#57707a;
-  --warn-bg:#fbe9db;
-  --warn-line:#e3a877;
-  /* magical theme-park layer */
-  --magic-1:#6a4cc9;
-  --magic-2:#d99a2b;
-  --magic-3:#2fb0a0;
-  --magic-ink:#4a2fa0;
-  --magic-glow:rgba(106,76,201,0.13);
-  --sparkle:#f2c14e;
-  --night-1:#3a3170;
-  --night-2:#6a4cc9;
+  --paper:#f5f1e7;
+  --paper-2:#ebe4d3;
+  --ink:#20242b;
+  --ink-soft:#54606b;
+  --ink-faint:#8a939c;
+  --card:#fffdf7;
+  --line:#e2dac6;
+  --accent:#c8102e;            /* 提灯の朱 */
+  --accent-ink:#8c0a1f;
+  --macau:#1f9e8f;             /* 翡翠 */
+  --disney:#d99a2b;            /* 金 */
+  --depart:#3f6f8f;            /* 維多利亞港のブルー */
+  --warn-bg:#fbeede;
+  --warn-line:#e6b98f;
+  --magic-1:#1f9e8f;           /* 翡翠（主アクセント。全体で再利用） */
+  --magic-2:#d99a2b;           /* 金 */
+  --magic-3:#d5468b;           /* ネオン桃 */
+  --magic-ink:#0d6c62;
+  --magic-glow:rgba(31,158,143,0.14);
+  --sparkle:#e8a33d;           /* 提灯の灯 */
+  --night-1:#123a5c;
+  --night-2:#1c5a7a;
+  --neon:#ff3d8b;
+  --neon-2:#19d3c5;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#0e1517;
-    --paper-2:#131c1f;
-    --ink:#e8edee;
-    --ink-soft:#a9babe;
-    --ink-faint:#78888c;
-    --card:#161f23;
-    --line:#263136;
-    --accent:#ef8a4c;
-    --accent-ink:#ffcfa8;
-    --macau:#4fb6a4;
-    --disney:#e0ac53;
-    --depart:#8fa6ac;
-    --warn-bg:#2b2013;
-    --warn-line:#7a5326;
-    --magic-1:#a58bff;
-    --magic-2:#f2c766;
-    --magic-3:#4fb6a4;
-    --magic-ink:#cdbcff;
-    --magic-glow:rgba(140,110,255,0.16);
-    --sparkle:#ffe1a0;
-    --night-1:#1b1740;
-    --night-2:#3a2f70;
+    --paper:#0c1116;
+    --paper-2:#111820;
+    --ink:#e9edf1;
+    --ink-soft:#aab6c0;
+    --ink-faint:#7d8894;
+    --card:#141c24;
+    --line:#26313c;
+    --accent:#ff5c72;
+    --accent-ink:#ffc0c9;
+    --macau:#4fd0bf;
+    --disney:#e7c06a;
+    --depart:#7fb0cf;
+    --warn-bg:#2a2013;
+    --warn-line:#7a5a2e;
+    --magic-1:#4fd0bf;
+    --magic-2:#eec474;
+    --magic-3:#ff86bf;
+    --magic-ink:#8fe6da;
+    --magic-glow:rgba(79,208,191,0.18);
+    --sparkle:#f0c46a;
+    --night-1:#0e2a44;
+    --night-2:#164a66;
+    --neon:#ff6bb0;
+    --neon-2:#3ce6d6;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0e1517;
-  --paper-2:#131c1f;
-  --ink:#e8edee;
-  --ink-soft:#a9babe;
-  --ink-faint:#78888c;
-  --card:#161f23;
-  --line:#263136;
-  --accent:#ef8a4c;
-  --accent-ink:#ffcfa8;
-  --macau:#4fb6a4;
-  --disney:#e0ac53;
-  --depart:#8fa6ac;
-  --warn-bg:#2b2013;
-  --warn-line:#7a5326;
-  --magic-1:#a58bff;
-  --magic-2:#f2c766;
-  --magic-3:#4fb6a4;
-  --magic-ink:#cdbcff;
-  --magic-glow:rgba(140,110,255,0.16);
-  --sparkle:#ffe1a0;
-  --night-1:#1b1740;
-  --night-2:#3a2f70;
+  --paper:#0c1116;
+  --paper-2:#111820;
+  --ink:#e9edf1;
+  --ink-soft:#aab6c0;
+  --ink-faint:#7d8894;
+  --card:#141c24;
+  --line:#26313c;
+  --accent:#ff5c72;
+  --accent-ink:#ffc0c9;
+  --macau:#4fd0bf;
+  --disney:#e7c06a;
+  --depart:#7fb0cf;
+  --warn-bg:#2a2013;
+  --warn-line:#7a5a2e;
+  --magic-1:#4fd0bf;
+  --magic-2:#eec474;
+  --magic-3:#ff86bf;
+  --magic-ink:#8fe6da;
+  --magic-glow:rgba(79,208,191,0.18);
+  --sparkle:#f0c46a;
+  --night-1:#0e2a44;
+  --night-2:#164a66;
+  --neon:#ff6bb0;
+  --neon-2:#3ce6d6;
 }
 
 *{box-sizing:border-box;}
@@ -107,28 +113,30 @@ h1,h2,h3{
 
 .wrap{max-width:760px; margin:0 auto; padding:0 1.25rem;}
 
-/* ---------- sparkle field (decorative, page-wide) ---------- */
+/* ---------- 紙吹雪＆小提灯フィールド (decorative, page-wide) ---------- */
 .sparkle-field{
   position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
 }
 .sparkle-field i{
-  position:absolute; display:block; width:10px; height:10px;
-  background:
-    radial-gradient(closest-side, var(--sparkle), transparent 70%);
+  position:absolute; display:block; width:9px; height:11px;
+  border-radius:2px;
+  background:var(--sparkle);
   opacity:0; transform:scale(0);
   animation:floatUp linear infinite;
 }
-.sparkle-field i::before{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(var(--sparkle),var(--sparkle)) center/2px 100% no-repeat,
-            linear-gradient(var(--sparkle),var(--sparkle)) center/100% 2px no-repeat;
-  filter:drop-shadow(0 0 3px var(--sparkle));
+.sparkle-field i:nth-child(3n){background:var(--accent); border-radius:2px;}
+.sparkle-field i:nth-child(3n+1){background:var(--magic-1); border-radius:2px;}
+.sparkle-field i:nth-child(4n){background:var(--magic-3);}
+.sparkle-field i:nth-child(5n){
+  width:12px; height:14px; border-radius:50% 50% 46% 46%;
+  background:var(--accent);
+  box-shadow:0 0 8px color-mix(in srgb,var(--accent) 60%, transparent);
 }
 @keyframes floatUp{
-  0%{opacity:0; transform:translateY(20px) scale(0) rotate(0deg);}
-  10%{opacity:0.9;}
-  50%{opacity:0.7;}
-  100%{opacity:0; transform:translateY(-120px) scale(1) rotate(160deg);}
+  0%{opacity:0; transform:translateY(24px) scale(0) rotate(0deg);}
+  10%{opacity:0.95;}
+  55%{opacity:0.7;}
+  100%{opacity:0; transform:translateY(-130px) scale(1) rotate(220deg);}
 }
 
 /* keep page content above sparkles */
@@ -201,20 +209,25 @@ header.hero{
   font-size:0.82rem;
   letter-spacing:0.14em;
   text-transform:uppercase;
-  color:var(--magic-ink);
+  color:var(--accent);
   margin-bottom:0.6rem;
   display:flex; align-items:center; gap:0.5rem;
 }
 h1{
-  font-size:2.4rem; font-weight:600; color:var(--ink);
-  background:linear-gradient(100deg, var(--ink) 30%, var(--magic-1) 50%, var(--ink) 70%);
-  background-size:220% 100%;
-  -webkit-background-clip:text; background-clip:text;
-  animation:shimmer 6s ease-in-out infinite;
+  font-size:2.45rem; font-weight:700; color:var(--ink);
+  letter-spacing:0.01em;
+  text-shadow:0 0 1px color-mix(in srgb,var(--neon) 40%, transparent);
 }
-@keyframes shimmer{
-  0%,100%{background-position:130% 0;}
-  50%{background-position:-30% 0;}
+h1 .neon{
+  color:var(--accent);
+  text-shadow:
+    0 0 6px color-mix(in srgb,var(--neon) 70%, transparent),
+    0 0 18px color-mix(in srgb,var(--neon) 45%, transparent);
+  animation:neonPulse 3.6s ease-in-out infinite;
+}
+@keyframes neonPulse{
+  0%,100%{opacity:1; text-shadow:0 0 6px color-mix(in srgb,var(--neon) 70%, transparent), 0 0 18px color-mix(in srgb,var(--neon) 40%, transparent);}
+  45%{opacity:0.92; text-shadow:0 0 3px color-mix(in srgb,var(--neon) 45%, transparent), 0 0 10px color-mix(in srgb,var(--neon) 25%, transparent);}
 }
 .subtitle{color:var(--ink-soft); font-size:1.02rem; margin-top:0.5rem;}
 
@@ -385,21 +398,21 @@ section{margin-top:2.8rem;}
 
 .day.d0{--dc:var(--night-2);}
 .day.d1{--dc:var(--macau);}
-.day.d2{--dc:var(--magic-1);}
+.day.d2{--dc:var(--disney);}
 .day.d3{--dc:var(--depart);}
 
 /* Day 2 = the magical one */
 .day.d2{
-  border-color:color-mix(in srgb,var(--magic-1) 40%, var(--line));
-  box-shadow:0 0 0 1px color-mix(in srgb,var(--magic-1) 12%, transparent),
-             0 10px 30px -18px color-mix(in srgb,var(--magic-1) 60%, transparent);
+  border-color:color-mix(in srgb,var(--disney) 45%, var(--line));
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--disney) 14%, transparent),
+             0 10px 30px -18px color-mix(in srgb,var(--disney) 60%, transparent);
 }
 .day.d2 .day-head{
-  background:linear-gradient(100deg, color-mix(in srgb,var(--magic-1) 14%, var(--card)), var(--card));
+  background:linear-gradient(100deg, color-mix(in srgb,var(--disney) 16%, var(--card)), var(--card));
 }
 .day.d2 .castle-mark{
   position:absolute; right:10px; bottom:8px; width:120px; height:auto;
-  color:var(--magic-1); opacity:0.1; pointer-events:none;
+  color:var(--disney); opacity:0.14; pointer-events:none;
 }
 .day.d2 .day-head .dot{animation:twinkle 3.4s ease-in-out infinite;}
 
@@ -525,13 +538,121 @@ footer a{color:var(--ink-soft);}
 .check-item span.txt{transition:color .15s, opacity .15s;}
 .check-item input:checked ~ span.txt{color:var(--ink-faint); text-decoration:line-through; opacity:0.75;}
 
+/* ==================================================================
+   香港テーマの飾り（オリジナルの絵柄・ディズニー実在キャラは不使用）
+   ================================================================== */
+
+/* --- hero: 提灯の紐・維港のスカイライン・紅帆のジャンク船・光のショー --- */
+.hero-deco .skyline{
+  position:absolute; left:0; right:0; bottom:-4px; width:100%; height:auto;
+  color:var(--depart); opacity:0.20;
+}
+.hero-deco .junk{
+  position:absolute; right:6%; bottom:14px; width:min(150px,30vw); height:auto;
+  color:var(--accent); opacity:0.9;
+  animation:sail 9s ease-in-out infinite;
+}
+.hero-deco .beam{
+  position:absolute; bottom:0; width:3px; height:66%;
+  background:linear-gradient(to top, color-mix(in srgb,var(--neon-2) 55%, transparent), transparent);
+  transform-origin:bottom center; opacity:0.5;
+  animation:sweep 6s ease-in-out infinite;
+}
+.hero-deco .beam.b1{left:22%; animation-delay:.0s; rotate:8deg;}
+.hero-deco .beam.b2{left:38%; animation-delay:1.2s; rotate:-6deg; background:linear-gradient(to top, color-mix(in srgb,var(--neon) 50%, transparent), transparent);}
+.hero-deco .beam.b3{left:64%; animation-delay:2.4s; rotate:12deg;}
+@keyframes sweep{0%,100%{rotate:6deg; opacity:.25;} 50%{rotate:-10deg; opacity:.6;}}
+@keyframes sail{0%,100%{transform:translateY(0) rotate(-1deg);} 50%{transform:translateY(-6px) rotate(1.5deg);}}
+
+/* 提灯の紐 */
+.lantern-string{
+  position:absolute; left:-2%; right:-2%; top:8px; height:40px;
+  display:flex; justify-content:space-around; align-items:flex-start;
+  pointer-events:none; z-index:1;
+}
+.lantern-string::before{
+  content:""; position:absolute; left:0; right:0; top:6px; height:0;
+  border-top:2px dashed color-mix(in srgb,var(--ink) 30%, transparent);
+  border-radius:50%;
+}
+.lantern-string .lant{
+  width:16px; height:20px; margin-top:6px; border-radius:46% 46% 42% 42%;
+  background:radial-gradient(circle at 50% 35%, color-mix(in srgb,#fff 45%, var(--accent)), var(--accent));
+  box-shadow:0 0 10px color-mix(in srgb,var(--accent) 55%, transparent);
+  position:relative;
+  animation:swing 4s ease-in-out infinite;
+  transform-origin:top center;
+}
+.lantern-string .lant::after{content:""; position:absolute; left:50%; bottom:-6px; width:2px; height:6px; background:var(--accent-ink); transform:translateX(-50%);}
+.lantern-string .lant:nth-child(2n){animation-delay:.7s; background:radial-gradient(circle at 50% 35%, color-mix(in srgb,#fff 50%, var(--disney)), var(--disney)); box-shadow:0 0 10px color-mix(in srgb,var(--disney) 55%, transparent);}
+.lantern-string .lant:nth-child(3n){animation-delay:1.4s; height:24px;}
+@keyframes swing{0%,100%{transform:rotate(-7deg);} 50%{transform:rotate(7deg);}}
+
+/* --- 出演者パレード（自作マスコットの行進） --- */
+.parade{
+  max-width:760px; margin:1.4rem auto 0; padding:0 1rem;
+  display:flex; gap:0.4rem; overflow-x:auto; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.parade::-webkit-scrollbar{display:none;}
+.parade .cast{
+  flex:none; width:78px; height:90px;
+  animation:bob 2.4s ease-in-out infinite;
+}
+.parade .cast svg{width:100%; height:100%; overflow:visible;}
+.parade .cast:nth-child(2n){animation-delay:.4s;}
+.parade .cast:nth-child(3n){animation-delay:.8s;}
+.parade .cast:nth-child(4n){animation-delay:1.2s;}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-7px) rotate(2deg);}}
+.parade-cap{
+  max-width:760px; margin:0.3rem auto 0; padding:0 1.25rem;
+  font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ink-faint);
+}
+
+/* section 見出しの下線を金→朱グラデに */
+.section-head h2::after{background:linear-gradient(90deg,var(--accent),var(--disney),transparent);}
+.quicknav a:hover{color:var(--accent); border-color:var(--accent);}
+
+/* --- 香港ディズニーランド 攻略セクション --- */
+.hkdl-intro{
+  background:linear-gradient(120deg, color-mix(in srgb,var(--disney) 12%, var(--card)), var(--card));
+  border:1px solid color-mix(in srgb,var(--disney) 34%, var(--line));
+  border-radius:14px; padding:1.1rem 1.25rem; margin-bottom:1.2rem; font-size:0.92rem;
+  position:relative; overflow:hidden;
+}
+.hkdl-intro .castle-mark{position:absolute; right:-6px; bottom:-10px; width:130px; color:var(--disney); opacity:0.13;}
+.hkdl-official{
+  display:inline-flex; align-items:center; gap:0.5rem;
+  margin-top:0.7rem; font-weight:700; font-size:0.9rem; text-decoration:none;
+  background:linear-gradient(100deg,var(--accent),var(--disney)); color:#fff;
+  border-radius:99px; padding:0.5rem 1.15rem;
+}
+.hkdl-official:hover{filter:brightness(1.06);}
+.land-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0.9rem;}
+.land-card{
+  background:var(--card); border:1px solid var(--line); border-radius:12px; padding:0.9rem 1rem;
+  border-left:4px solid var(--lc,var(--disney));
+}
+.land-card h4{margin:0 0 0.2rem; font-family:'Fraunces',serif; font-size:1rem;}
+.land-card .en{font-family:'IBM Plex Mono',monospace; font-size:0.68rem; color:var(--ink-faint); display:block; margin-bottom:0.35rem;}
+.land-card p{margin:0; font-size:0.85rem; color:var(--ink-soft);}
+.showtimes{list-style:none; margin:0.8rem 0 0; padding:0; display:flex; flex-direction:column; gap:0.5rem;}
+.showtimes li{
+  display:flex; gap:0.7rem; align-items:baseline;
+  border-bottom:1px dashed var(--line); padding-bottom:0.5rem; font-size:0.88rem;
+}
+.showtimes li:last-child{border-bottom:none;}
+.showtimes .st{
+  flex:none; width:104px; font-family:'IBM Plex Mono',monospace; font-size:0.82rem;
+  color:var(--accent-ink); font-weight:600;
+}
+
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   .sparkle-field{display:none;}
-  .hero-deco .fw path, .hero-deco .fw circle,
-  .hero-deco .twinkle, h1, .day.d2 .day-head .dot{animation:none !important;}
-  h1{background:none; -webkit-background-clip:border-box; background-clip:border-box; color:var(--ink);}
+  .hero-deco *, .lantern-string .lant, .parade .cast,
+  h1 .neon, .day.d2 .day-head .dot{animation:none !important;}
 }
 </style>
 </head>
@@ -544,6 +665,7 @@ footer a{color:var(--ink-soft);}
   <a href="#day1">Day 1</a>
   <a href="#day2">Day 2</a>
   <a href="#day3">Day 3</a>
+  <a href="#hkdl">Dパーク攻略</a>
   <a href="#map">マップ</a>
   <a href="#transit">交通</a>
   <a href="#money">両替</a>
@@ -554,35 +676,51 @@ footer a{color:var(--ink-soft);}
 
 <header class="hero">
   <div class="hero-deco" aria-hidden="true">
-    <!-- fireworks -->
-    <svg class="fw a" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-      <g><path d="M50 50 V12"/><path d="M50 50 V88"/><path d="M50 50 H12"/><path d="M50 50 H88"/><path d="M50 50 L24 24"/><path d="M50 50 L76 24"/><path d="M50 50 L24 76"/><path d="M50 50 L76 76"/><circle cx="50" cy="10" r="3" fill="currentColor"/><circle cx="90" cy="50" r="3" fill="currentColor"/><circle cx="10" cy="50" r="3" fill="currentColor"/><circle cx="50" cy="90" r="3" fill="currentColor"/></g>
-    </svg>
-    <svg class="fw b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-      <g><path d="M50 50 V14"/><path d="M50 50 V86"/><path d="M50 50 H14"/><path d="M50 50 H86"/><path d="M50 50 L28 28"/><path d="M50 50 L72 28"/><path d="M50 50 L28 72"/><path d="M50 50 L72 72"/><circle cx="50" cy="12" r="3" fill="currentColor"/><circle cx="88" cy="50" r="3" fill="currentColor"/><circle cx="12" cy="50" r="3" fill="currentColor"/><circle cx="50" cy="88" r="3" fill="currentColor"/></g>
-    </svg>
-    <svg class="fw c" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-      <g><path d="M50 50 V16"/><path d="M50 50 V84"/><path d="M50 50 H16"/><path d="M50 50 H84"/><circle cx="50" cy="14" r="3" fill="currentColor"/><circle cx="86" cy="50" r="3" fill="currentColor"/></g>
-    </svg>
+    <!-- 光のショー風のビーム -->
+    <span class="beam b1"></span><span class="beam b2"></span><span class="beam b3"></span>
     <!-- twinkles -->
     <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
     <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
     <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
-    <svg class="twinkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z"/></svg>
-    <!-- castle silhouette -->
-    <svg class="castle" viewBox="0 0 200 160" fill="currentColor" aria-hidden="true">
-      <rect x="18" y="86" width="24" height="74"/><path d="M14 86 h32 l-6 -14 h-20 z"/><path d="M30 60 l6 12 h-12 z"/>
-      <rect x="158" y="86" width="24" height="74"/><path d="M154 86 h32 l-6 -14 h-20 z"/><path d="M170 60 l6 12 h-12 z"/>
-      <rect x="58" y="64" width="20" height="96"/><path d="M54 64 h28 l-6 -14 h-16 z"/><path d="M68 40 l6 12 h-12 z"/>
-      <rect x="122" y="64" width="20" height="96"/><path d="M118 64 h28 l-6 -14 h-16 z"/><path d="M132 40 l6 12 h-12 z"/>
-      <rect x="86" y="40" width="28" height="120"/><path d="M80 40 h40 l-8 -18 h-24 z"/><path d="M100 8 l7 14 h-14 z"/>
-      <path d="M92 120 h16 v40 h-16 z" fill="var(--paper)"/>
+    <!-- 維多利亞港のスカイライン（自作シルエット） -->
+    <svg class="skyline" viewBox="0 0 1200 200" fill="currentColor" preserveAspectRatio="none" aria-hidden="true">
+      <rect x="20" y="120" width="34" height="80"/><rect x="66" y="90" width="26" height="110"/>
+      <rect x="104" y="140" width="40" height="60"/><rect x="156" y="70" width="30" height="130"/>
+      <path d="M196 200 V60 l16 -26 l16 26 V200 z"/>
+      <rect x="240" y="110" width="46" height="90"/><rect x="298" y="150" width="30" height="50"/>
+      <rect x="340" y="46" width="24" height="154"/><rect x="340" y="30" width="10" height="20"/>
+      <rect x="378" y="130" width="52" height="70"/><rect x="442" y="96" width="28" height="104"/>
+      <path d="M486 200 V80 h44 l-12 -22 h-20 l-12 22 z"/>
+      <rect x="544" y="120" width="38" height="80"/><rect x="592" y="60" width="34" height="140"/>
+      <path d="M592 60 l17 -30 l17 30"/>
+      <rect x="640" y="150" width="30" height="50"/><rect x="680" y="100" width="46" height="100"/>
+      <rect x="736" y="70" width="26" height="130"/><rect x="736" y="52" width="6" height="18"/>
+      <rect x="774" y="132" width="44" height="68"/><rect x="828" y="92" width="30" height="108"/>
+      <path d="M872 200 V64 l20 -24 l20 24 V200 z"/>
+      <rect x="924" y="120" width="40" height="80"/><rect x="974" y="150" width="28" height="50"/>
+      <rect x="1014" y="80" width="30" height="120"/><rect x="1056" y="120" width="46" height="80"/>
+      <rect x="1114" y="100" width="26" height="100"/><rect x="1150" y="140" width="34" height="60"/>
+    </svg>
+    <!-- 紅帆のジャンク船（維港の名物・自作） -->
+    <svg class="junk" viewBox="0 0 200 150" aria-hidden="true">
+      <path d="M18 118 h150 l-20 22 h-110 z" fill="currentColor"/>
+      <rect x="60" y="30" width="4" height="90" fill="var(--ink-soft)"/>
+      <rect x="128" y="14" width="4" height="106" fill="var(--ink-soft)"/>
+      <path d="M64 40 q40 4 40 34 q0 30 -40 40 z" fill="currentColor"/>
+      <path d="M64 46 h36 M64 58 h34 M64 70 h32 M64 82 h30 M64 94 h26" stroke="var(--card)" stroke-width="2" opacity="0.6"/>
+      <path d="M132 24 q46 6 46 44 q0 38 -46 52 z" fill="currentColor"/>
+      <path d="M132 32 h42 M132 46 h42 M132 60 h40 M132 74 h36 M132 88 h30 M132 102 h24" stroke="var(--card)" stroke-width="2" opacity="0.6"/>
     </svg>
   </div>
+  <div class="lantern-string" aria-hidden="true">
+    <span class="lant"></span><span class="lant"></span><span class="lant"></span><span class="lant"></span>
+    <span class="lant"></span><span class="lant"></span><span class="lant"></span><span class="lant"></span>
+    <span class="lant"></span><span class="lant"></span>
+  </div>
   <div class="wrap">
-    <div class="eyebrow"><span>✨ Trip Plan · HKG / MFM</span></div>
-    <h1>香港・マカオ 3日間の旅</h1>
-    <p class="subtitle">羽田前泊（10/9夜）＋香港・マカオ2泊3日（10/10〜12）。マカオはカジノがメイン、夜は香港島でビクトリア・ピークの100万ドルの夜景、中日は香港ディズニーランドを終日。5人で回るしおりです。</p>
+    <div class="eyebrow"><span>🏮 香港 HKG × 澳門 MFM ・ Trip Plan</span></div>
+    <h1><span class="neon">香港</span>・マカオ 3日間の旅</h1>
+    <p class="subtitle">羽田前泊（10/9夜）＋香港・マカオ2泊3日（10/10〜12）。マカオはカジノがメイン、夜は香港島でビクトリア・ピークの100万ドルの夜景、中日は香港ディズニーランドを終日。5人で回るしおりです。<br><span style="font-size:0.85rem;color:var(--ink-faint);">最終更新：2026年9月1日 ／ 現在版（追記予定あり）</span></p>
     <div class="stat-row">
       <div class="stat"><div class="k">日程</div><div class="v">10/9夜–10/12</div></div>
       <div class="stat"><div class="k">人数</div><div class="v">5名（男2・女3）</div></div>
@@ -591,6 +729,63 @@ footer a{color:var(--ink-soft);}
     </div>
   </div>
 </header>
+
+<div class="parade" aria-hidden="true">
+  <!-- 自作マスコットの行進（実在キャラは不使用） -->
+  <div class="cast" title="点心バオちゃん"><svg viewBox="0 0 80 90">
+    <ellipse cx="40" cy="46" rx="26" ry="24" fill="var(--paper-2)" stroke="var(--ink-soft)" stroke-width="2"/>
+    <path d="M22 34 q6 -10 18 -10 q12 0 18 10 M28 28 q4 -8 12 -8 q8 0 12 8" fill="none" stroke="var(--ink-soft)" stroke-width="2"/>
+    <circle cx="32" cy="46" r="3" fill="var(--ink)"/><circle cx="48" cy="46" r="3" fill="var(--ink)"/>
+    <path d="M34 56 q6 6 12 0" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="24" cy="54" r="4" fill="var(--accent)" opacity="0.5"/><circle cx="56" cy="54" r="4" fill="var(--accent)" opacity="0.5"/>
+    <path d="M20 70 h40 l-4 12 h-32 z" fill="var(--macau)"/>
+  </svg></div>
+  <div class="cast" title="提灯おじさん"><svg viewBox="0 0 80 90">
+    <path d="M28 8 h24 v6 h-24 z" fill="var(--accent-ink)"/>
+    <path d="M22 14 h36 q4 22 -18 26 q-22 -4 -18 -26 z" fill="var(--accent)"/>
+    <path d="M28 16 v22 M40 15 v25 M52 16 v22" stroke="var(--disney)" stroke-width="2"/>
+    <circle cx="34" cy="26" r="2.5" fill="#fff"/><circle cx="46" cy="26" r="2.5" fill="#fff"/>
+    <path d="M36 32 q4 4 8 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <rect x="34" y="44" width="12" height="26" rx="4" fill="var(--depart)"/>
+    <path d="M34 50 l-12 8 M46 50 l12 8" stroke="var(--depart)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M36 70 l-6 14 M44 70 l6 14" stroke="var(--ink-soft)" stroke-width="5" stroke-linecap="round"/>
+  </svg></div>
+  <div class="cast" title="叮叮トラム"><svg viewBox="0 0 80 90">
+    <rect x="10" y="26" width="60" height="42" rx="6" fill="var(--disney)" stroke="var(--ink-soft)" stroke-width="2"/>
+    <rect x="10" y="18" width="60" height="10" rx="3" fill="var(--accent)"/>
+    <rect x="16" y="34" width="14" height="14" rx="2" fill="var(--card)"/><rect x="34" y="34" width="14" height="14" rx="2" fill="var(--card)"/><rect x="52" y="34" width="12" height="14" rx="2" fill="var(--card)"/>
+    <circle cx="24" cy="72" r="6" fill="var(--ink)"/><circle cx="56" cy="72" r="6" fill="var(--ink)"/>
+    <circle cx="22" cy="42" r="2" fill="var(--ink)"/><circle cx="30" cy="42" r="2" fill="var(--ink)"/>
+    <path d="M20 52 q6 5 14 0" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40 26 v-14" stroke="var(--ink-soft)" stroke-width="2"/>
+  </svg></div>
+  <div class="cast" title="龍舞のあたま"><svg viewBox="0 0 80 90">
+    <path d="M14 40 q0 -22 24 -22 q22 0 26 18 q2 12 -8 18 q4 8 -2 12 q-8 4 -14 -2 q-18 2 -26 -10 q-4 -8 0 -14 z" fill="var(--accent)" stroke="var(--accent-ink)" stroke-width="2"/>
+    <circle cx="30" cy="34" r="6" fill="#fff"/><circle cx="30" cy="34" r="3" fill="var(--ink)"/>
+    <path d="M16 26 q-8 -6 -4 -14 q8 2 8 12 z" fill="var(--disney)"/>
+    <path d="M60 30 q10 -4 12 4 q-6 6 -14 2 z" fill="var(--disney)"/>
+    <path d="M40 56 q10 4 20 0" fill="none" stroke="var(--disney)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M20 70 q10 8 22 4 q10 8 22 2" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </svg></div>
+  <div class="cast" title="風船売りペンペン"><svg viewBox="0 0 80 90">
+    <ellipse cx="36" cy="52" rx="16" ry="20" fill="var(--depart)"/>
+    <ellipse cx="36" cy="56" rx="10" ry="13" fill="var(--paper)"/>
+    <circle cx="31" cy="44" r="2.5" fill="var(--ink)"/><circle cx="41" cy="44" r="2.5" fill="var(--ink)"/>
+    <path d="M33 50 l6 0 -3 4 z" fill="var(--disney)"/>
+    <path d="M50 40 l16 -20 M50 42 l20 -10 M50 46 l20 2" stroke="var(--ink-soft)" stroke-width="1.5"/>
+    <circle cx="68" cy="18" r="7" fill="var(--accent)"/><circle cx="72" cy="30" r="6" fill="var(--macau)"/><circle cx="70" cy="46" r="6" fill="var(--magic-3)"/>
+    <path d="M28 72 l-4 12 M44 72 l4 12" stroke="var(--depart)" stroke-width="5" stroke-linecap="round"/>
+  </svg></div>
+  <div class="cast" title="花火係のホシくん"><svg viewBox="0 0 80 90">
+    <circle cx="40" cy="42" r="20" fill="var(--disney)"/>
+    <path d="M40 10 l4 12 -4 -3 -4 3 z M40 74 l4 -12 -4 3 -4 -3 z M8 42 l12 4 -3 -4 3 -4 z M72 42 l-12 4 3 -4 -3 -4 z" fill="var(--disney)"/>
+    <circle cx="34" cy="40" r="3" fill="var(--ink)"/><circle cx="46" cy="40" r="3" fill="var(--ink)"/>
+    <path d="M34 50 q6 6 12 0" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M56 30 l14 -14 M70 16 l0 6 M70 16 l-6 0" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="70" cy="14" r="3" fill="var(--accent)"/>
+  </svg></div>
+</div>
+<p class="parade-cap">出演：点心バオちゃん・提灯おじさん・叮叮トラム・龍舞のあたま・風船売りペンペン・花火係のホシくん（すべて当しおりオリジナル）</p>
 
 <div class="wrap">
 
@@ -778,6 +973,97 @@ footer a{color:var(--ink-soft);}
         <div class="item"><div class="node"></div><div class="time">18:00</div><div class="body"><b>パークを出る</b><p class="tbd-note">花火・ナイトショー（「Momentous」など）は20時前後の実施。18時に出るとこれは見られないので、見たい場合はこの退園時刻を延ばすか、この日の夜の予定を組み替える検討を。</p></div></div>
         <div class="item"><div class="node"></div><div class="time">18:15〜</div><div class="body"><b>MTRで市街へ戻る／夕食・自由行動</b><p>欣澳や市街で夕食。夜に何かしたい場合はここから。</p></div></div>
       </div>
+    </div>
+
+    <div class="warn" style="margin-top:1.1rem;">
+      <strong>🏰 詳しい回り方は下の「香港ディズニーランド 攻略」へ。</strong>
+      10月中旬は例年 <strong>「ディズニー・ハロウィーン・タイム」</strong>（おおむね9月中旬〜10月末）の期間で、パーク各所がハロウィーン装飾になり、期間限定のショーやグリーティングが加わることが多いです（実施の有無・日程は必ず公式カレンダーで確認）。
+    </div>
+  </section>
+
+  <!-- ================= 香港ディズニーランド 攻略 ================= -->
+  <section id="hkdl">
+    <div class="section-head">
+      <h2><span class="ico">🎠</span>香港ディズニーランド 攻略</h2>
+      <span class="tag">Hong Kong Disneyland · Day 2 の予習</span>
+    </div>
+
+    <div class="hkdl-intro">
+      <svg class="castle-mark" viewBox="0 0 200 160" fill="currentColor" aria-hidden="true">
+        <rect x="18" y="86" width="24" height="74"/><path d="M14 86 h32 l-6 -14 h-20 z"/><path d="M30 60 l6 12 h-12 z"/>
+        <rect x="158" y="86" width="24" height="74"/><path d="M154 86 h32 l-6 -14 h-20 z"/><path d="M170 60 l6 12 h-12 z"/>
+        <rect x="58" y="64" width="20" height="96"/><path d="M54 64 h28 l-6 -14 h-16 z"/><path d="M68 40 l6 12 h-12 z"/>
+        <rect x="122" y="64" width="20" height="96"/><path d="M118 64 h28 l-6 -14 h-16 z"/><path d="M132 40 l6 12 h-12 z"/>
+        <rect x="86" y="40" width="28" height="120"/><path d="M80 40 h40 l-8 -18 h-24 z"/><path d="M100 8 l7 14 h-14 z"/>
+      </svg>
+      <p>世界のディズニーランドの中で最もコンパクトで、8つのエリアを1日でひととおり回れる規模。開園はおおむね <strong>10:00〜10:30</strong>、ゲートは開園の30分ほど前から入場でき、最初はメインストリートUSAまで進めます。</p>
+      <p style="margin:0.6rem 0 0;">2025年6月28日〜2026年6月28日は開園20周年イベント「The Most Magical Party of All」の期間でしたが、<strong>10月の旅行時点では終了している見込み</strong>です。代わりに 10月は上記のハロウィーン期間にあたる可能性が高いので、<strong>当日の営業時間・ショー時間・イベント内容は必ず公式サイトで確認</strong>してください（営業カレンダーは概ね3か月先まで公開・出発2週間前に再確認）。</p>
+      <a class="hkdl-official" href="https://www.hongkongdisneyland.com/" target="_blank" rel="noopener">香港ディズニーランド 公式サイト（hongkongdisneyland.com）↗</a>
+    </div>
+
+    <h3 style="font-family:'Fraunces',serif;font-size:1.1rem;margin:0 0 0.7rem;">8つのテーマエリア</h3>
+    <div class="land-grid">
+      <div class="land-card" style="--lc:var(--accent)">
+        <h4>メインストリート USA</h4><span class="en">Main Street, U.S.A.</span>
+        <p>入園ゲートからお城へ続く目抜き通り。ショップとレストランが集まる。閉園間際の買い物はここで。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--macau)">
+        <h4>アドベンチャーランド</h4><span class="en">Adventureland</span>
+        <p>ジャングル・リバー・クルーズ、ターザンの木の家。屋内劇場のショー「フェスティバル・オブ・ザ・ライオンキング」は必見枠。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--disney)">
+        <h4>グリズリー・ガルチ</h4><span class="en">Grizzly Gulch</span>
+        <p>西部開拓時代の町。目玉は絶叫コースター「ビッグ・グリズリー・マウンテン」。香港とアメリカ以外にはないエリア。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--depart)">
+        <h4>ミスティック・ポイント</h4><span class="en">Mystic Point</span>
+        <p>香港ディズニー限定のトラックレス・ライド「ミスティック・マナー」。世界のマニアが評価する完成度。朝イチ推奨。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--magic-3)">
+        <h4>トイ・ストーリーランド</h4><span class="en">Toy Story Land</span>
+        <p>RCレーサー、スリンキー・ドッグ・スピン、トイソルジャー・パラシュートドロップ。子ども向け〜そこそこ絶叫まで。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--magic-1)">
+        <h4>ファンタジーランド</h4><span class="en">Fantasyland</span>
+        <p>「イッツ・ア・スモールワールド」、ティーカップ、回転木馬、ミッキーのフィルハーマジック。城の前がショーの舞台。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--night-2)">
+        <h4>トゥモローランド</h4><span class="en">Tomorrowland</span>
+        <p>スター・ウォーズ仕様の「ハイパースペース・マウンテン」、マーベルの「アイアンマン・エクスペリエンス」「アントマン&ワスプ」。</p>
+      </div>
+      <div class="land-card" style="--lc:var(--neon-2)">
+        <h4>ワールド・オブ・フローズン</h4><span class="en">World of Frozen</span>
+        <p>2023年開業の新エリア。ボートライド「フローズン・エバー・アフター」、ファミリー向けコースター、街並みも撮影スポット。混みやすい。</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Fraunces',serif;font-size:1.1rem;margin:1.4rem 0 0.6rem;">目玉アトラクション（優先度高め）</h3>
+    <div class="panel">
+      <ul style="margin:0;padding-left:1.1rem;color:var(--ink-soft);font-size:0.9rem;">
+        <li><strong>ミスティック・マナー</strong>（ミスティック・ポイント）— 香港限定。開園直後か夕方が狙い目。</li>
+        <li><strong>フローズン・エバー・アフター</strong>（ワールド・オブ・フローズン）— 人気で待ち時間が伸びやすい。朝のうちに。</li>
+        <li><strong>ビッグ・グリズリー・マウンテン</strong>（グリズリー・ガルチ）— 後ろ向き走行もある本格コースター。</li>
+        <li><strong>ハイパースペース・マウンテン</strong>（トゥモローランド）— 屋内暗闇コースター。</li>
+        <li><strong>アイアンマン・エクスペリエンス</strong> / <strong>アントマン&ワスプ：ナノ・バトル！</strong>（トゥモローランド）— シミュレーター＆シューティング。</li>
+      </ul>
+    </div>
+
+    <h3 style="font-family:'Fraunces',serif;font-size:1.1rem;margin:1.4rem 0 0.6rem;">ショー・パレード（時刻は目安・要公式確認）</h3>
+    <ul class="showtimes">
+      <li><span class="st">13:00 / 17:15頃</span><span><strong>デイパレード</strong>（近年は「Friendtastic!」名義・11台のフロート）。メインストリート〜ファンタジーランドを巡行。1回目のほうが空いていることが多い。</span></li>
+      <li><span class="st">日中・数回</span><span><strong>「Follow Your Dreams」</strong>— 昼のキャッスル・ステージショー。</span></li>
+      <li><span class="st">昼・屋内</span><span><strong>「フェスティバル・オブ・ザ・ライオンキング」</strong>— アドベンチャーランドの劇場。冷房が効いていて休憩も兼ねられる。</span></li>
+      <li><span class="st">20:00〜21:00頃</span><span><strong>「Momentous」</strong>— 夜のキャッスル・スペクタキュラー（プロジェクション＋ドローン＋花火）。<strong class="tbd-note">18時退園だと見られない</strong>ので、見たい場合は退園時刻を延ばすか予定を調整。</span></li>
+    </ul>
+
+    <div class="warn" style="margin-top:1.1rem;">
+      <strong>🎟 回り方のコツ：</strong>
+      ①チケットは<strong>日付指定でオンライン事前購入</strong>（当日券より安く、入場もスムーズ）。
+      ②入園したらまず<strong>公式アプリ</strong>で当日の開園/閉園・ショー時間・待ち時間を確認。
+      ③<strong>朝イチはミスティック・マナー か フローズン</strong>へ直行、人気コースターも午前中に。
+      ④昼はパレード/ショーの時間に合わせて食事・休憩。
+      ⑤待ち時間短縮の有料サービス（Priority 系）があれば、混雑日は検討。
+      ⑥ミッキー形の窓の「ディズニーランド・リゾート線」自体もフォトスポット。
     </div>
   </section>
 
@@ -1075,8 +1361,8 @@ footer a{color:var(--ink-soft);}
   </section>
 
   <footer>
-    このプランは2026年8月30日時点の情報（予約メール記載内容＋一般的な運航・営業・グルメ情報）をもとに作成した草案です。ディズニーランドの開園時間、フェリーの時刻表・発着ターミナル、シンフォニー・オブ・ライツの実施状況、飲食店の営業状況、タクシー運賃、京急・東京モノレールの始発時刻は変更されることがあるため、出発が近づいたら公式サイトで再確認してください。<strong>持ち物チェックはこの端末のブラウザ内にのみ保存</strong>され、他の人とは共有されません。<strong>「みんなのおすすめ追加」は共有データベース（Firebase Realtime Database）に保存</strong>され、URLを開いた全員に反映されます（未設定・接続できない場合はこの端末内のみ）。<br>
-    参考：<a href="https://urtrip.jp/macau-hongkong-ferry/">香港⇄マカオ フェリー・ターミナル情報</a>／<a href="https://castel.jp/p/9169">香港ディズニーランド 営業時間ガイド</a>／<a href="https://www.tripadvisor.com/Hotel_Review-g294217-d305947-Reviews-Metropark_Hotel_Kowloon-Hong_Kong.html">Metropark Hotel Kowloon 立地情報</a>／<a href="https://www.macaushimbun.com/archives/18643">マカオ カジノ年齢制限（21歳以上）</a>／<a href="https://www.hkexpress.com/ja/Explore/Travel-Guide/Macao/must-eat-food-in-macao">マカオ必食グルメガイド</a>／<a href="https://jp.trip.com/guide/info/%E9%A6%99%E6%B8%AF%E3%81%AE10%E6%9C%88%E3%81%AE%E6%B0%97%E6%B8%A9.html">香港10月の気候ガイド</a>／<a href="https://airports-travel.jp/travel/transportation/shuttlebus-hongkong-to-macau/">香港国際空港→マカオ 無料直行バス案内</a>／<a href="https://blog.fubukiefsf.info/entry/hongkong-airport-direct-bus-to-macau">空港直行バス 体験レポート（手続き詳細）</a>／<a href="https://www.macaushimbun.com/archives/58656">Fly You to Macaoキャンペーン情報</a>／<a href="https://urtrip.jp/victoria_peak_tram/">ピークトラム チケット・行き方ガイド</a>／<a href="https://www.hkexpress.com/en/Plan/Guideline/Airport-Check-in/Counter-Check-in-Timetable">香港エクスプレス カウンターチェックイン時間</a>／<a href="https://transit.yahoo.co.jp/timetable/22910/3231">天空橋駅（京急空港線）時刻表</a>／<a href="https://urtrip.jp/hongkong_disney_access/">香港ディズニーランドへの行き方</a>／<a href="https://urtrip.jp/hongkong_airport_access/">香港国際空港アクセス／エアポートエクスプレス</a>／<a href="https://locotabi.jp/hongkong/guide/tp-gen-taxi">香港タクシー運賃ガイド</a>／<a href="https://wise.com/jp/blog/cash-or-card-in-hongkong">香港の現金・カード事情</a>／<a href="https://travel.rakuten.com/usa/en-us/hotel_info_item/10123456890016">Ikidane Cozy Hotel Haneda Airport 施設情報</a>／<a href="https://app.nearme.jp/blog/articles/2024-03-22-haneda-airport-nearme-transfer-service-guide">NearMe 羽田空港送迎サービス案内</a>
+    <strong>最終更新：2026年9月1日</strong>（予約メール記載内容＋一般的な運航・営業・グルメ・パーク情報をもとにした草案。<strong>現在版・追記予定あり</strong>）。香港ディズニーランドの営業時間・ショー時間・イベント（ハロウィーン等）、フェリーの時刻表・発着ターミナル、シンフォニー・オブ・ライツの実施状況、飲食店の営業状況、タクシー運賃、京急・東京モノレールの始発時刻は変更されることがあるため、出発が近づいたら各公式サイトで再確認してください。ディズニーの詳細は<a href="https://www.hongkongdisneyland.com/">香港ディズニーランド公式サイト</a>で。<strong>持ち物チェックはこの端末のブラウザ内にのみ保存</strong>され、他の人とは共有されません。<strong>「みんなのおすすめ追加」</strong>は共有データベース（Firebase Realtime Database）に保存する設計ですが、現在は未設定のため各端末内のみの保存です。<br>
+    参考：<a href="https://urtrip.jp/macau-hongkong-ferry/">香港⇄マカオ フェリー・ターミナル情報</a>／<a href="https://castel.jp/p/9169">香港ディズニーランド 営業時間ガイド</a>／<a href="https://www.tripadvisor.com/Hotel_Review-g294217-d305947-Reviews-Metropark_Hotel_Kowloon-Hong_Kong.html">Metropark Hotel Kowloon 立地情報</a>／<a href="https://www.macaushimbun.com/archives/18643">マカオ カジノ年齢制限（21歳以上）</a>／<a href="https://www.hkexpress.com/ja/Explore/Travel-Guide/Macao/must-eat-food-in-macao">マカオ必食グルメガイド</a>／<a href="https://jp.trip.com/guide/info/%E9%A6%99%E6%B8%AF%E3%81%AE10%E6%9C%88%E3%81%AE%E6%B0%97%E6%B8%A9.html">香港10月の気候ガイド</a>／<a href="https://airports-travel.jp/travel/transportation/shuttlebus-hongkong-to-macau/">香港国際空港→マカオ 無料直行バス案内</a>／<a href="https://blog.fubukiefsf.info/entry/hongkong-airport-direct-bus-to-macau">空港直行バス 体験レポート（手続き詳細）</a>／<a href="https://www.macaushimbun.com/archives/58656">Fly You to Macaoキャンペーン情報</a>／<a href="https://urtrip.jp/victoria_peak_tram/">ピークトラム チケット・行き方ガイド</a>／<a href="https://www.hkexpress.com/en/Plan/Guideline/Airport-Check-in/Counter-Check-in-Timetable">香港エクスプレス カウンターチェックイン時間</a>／<a href="https://transit.yahoo.co.jp/timetable/22910/3231">天空橋駅（京急空港線）時刻表</a>／<a href="https://urtrip.jp/hongkong_disney_access/">香港ディズニーランドへの行き方</a>／<a href="https://www.hongkongdisneyland.com/">香港ディズニーランド 公式サイト</a>／<a href="https://castel.jp/p/10070">香港ディズニー20周年・ショー/パレード情報</a>／<a href="https://dpost.jp/2026/02/13/wp-131929/">World of Frozen 最新情報</a>／<a href="https://urtrip.jp/hongkong_airport_access/">香港国際空港アクセス／エアポートエクスプレス</a>／<a href="https://locotabi.jp/hongkong/guide/tp-gen-taxi">香港タクシー運賃ガイド</a>／<a href="https://wise.com/jp/blog/cash-or-card-in-hongkong">香港の現金・カード事情</a>／<a href="https://travel.rakuten.com/usa/en-us/hotel_info_item/10123456890016">Ikidane Cozy Hotel Haneda Airport 施設情報</a>／<a href="https://app.nearme.jp/blog/articles/2024-03-22-haneda-airport-nearme-transfer-service-guide">NearMe 羽田空港送迎サービス案内</a>
   </footer>
 
 </div>
