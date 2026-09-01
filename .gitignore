@@ -1,14 +1,5 @@
-# この公開リポジトリには「配信するファイル（docs/）」だけを置く。
-# 平文ソース・ビルド道具・復号情報はローカル（C:\dev\hk-trip-plan）のみ。
-src/
-scripts/
 node_modules/
-package.json
-package-lock.json
-.staticrypt.json
-REQUIREMENTS.md
 *.log
-.serve.log
 .DS_Store
 Thumbs.db
 desktop.ini
